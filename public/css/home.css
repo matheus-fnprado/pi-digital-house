@@ -7,6 +7,10 @@
     font-family: 'Roboto'
 }
 
+main{
+    background-color: #f3f9f2;
+}
+
 /* HEADER */
 
 header {
@@ -108,6 +112,40 @@ header .navigation nav.navigation-img{
     text-decoration: none;
     text-transform: uppercase;
 }
+
+/* PRIMEIRO CARROSSEL */
+
+#carrossel-1 h2{
+    font-size: 18px;
+
+    padding-left: 36px;
+}
+
+#carrossel-1 h3{
+    font-size: 15px;
+    text-align: center;
+
+    margin-inline: 60px;
+    margin-block: 32px;
+}
+
+#cards{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 30px;
+
+    gap: 20px;
+}
+
+.card-produto{
+    width: 281px;
+    height: 405px;
+
+    background-color: #fff;
+}
+
 
 /* RODAPE */
 
