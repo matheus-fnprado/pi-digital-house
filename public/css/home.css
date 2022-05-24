@@ -146,6 +146,19 @@ header .navigation nav.navigation-img{
     background-color: #fff;
 }
 
+.card-produto img{
+    margin-top: 10px;
+    margin-left: 90%;
+}
+
+.card-produto svg{
+    margin-top: 30px;
+
+    width: 129px;
+    height: 146px;
+}
+
+
 
 /* RODAPE */
 

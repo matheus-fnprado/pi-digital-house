@@ -20,7 +20,9 @@ const homeController = {
     segmentos: (req, res) => {
         res.render('home/segmentos');
     },
-    
+    termos: (req, res) => {
+        res.render('home/termos');
+    }
 }
 
 
