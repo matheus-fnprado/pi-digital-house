@@ -127,19 +127,20 @@ header .navigation nav.navigation-img{
 }
 
 .footer-up nav.newsletter {
-    font-size: 15px;
-
-    
+    font-size: 20px; 
 }
 
  .footer-up .newsletter a{
+    color: #000;
+    font-weight: bold;
+
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    text-transform: uppercase;
   
     
 }
 
-main .cadastro form{
+.cadastro form{
     gap: 30px;
     
 
@@ -147,12 +148,12 @@ main .cadastro form{
 }
 
 
-main  .cadastro #nome{
+.cadastro #nome{
     border: none;
     border-radius: 20px;
 
-    width: 35%;
-    height: 20px;
+    width: 253px;
+    height: 25px;
 
     text-align: center;
     font-size: 12px;
@@ -160,12 +161,12 @@ main  .cadastro #nome{
     
 }
 
-main  .cadastro #email{
+.cadastro #email{
     border: none;
     border-radius: 20px;
 
-    width: 35%;
-    height: 20px;
+    width: 253px;
+    height: 25px;
 
     text-align: center;
     font-size: 12px;
@@ -174,16 +175,15 @@ main  .cadastro #email{
     
 }
 
-main .cadastro button {
+.cadastro button {
     width: 30%;
 
     border: none;
-    border-radius: 3px;
+    border-radius: 20px;
 
     color: #fff;
     background-color: rgb(2, 73, 77);
 }
-
 
 
 
