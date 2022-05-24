@@ -109,6 +109,85 @@ header .navigation nav.navigation-img{
     text-transform: uppercase;
 }
 
+/* RODAPE - UP */
+
+.footer-up {
+    width: 100%;
+    height: auto;
+
+    background-color: rgb(147, 254, 2);
+    opacity: 100%;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 300px;
+
+    gap: 100px;    
+}
+
+.footer-up nav.newsletter {
+    font-size: 15px;
+
+    
+}
+
+ .footer-up .newsletter a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+  
+    
+}
+
+main .cadastro form{
+    gap: 30px;
+    
+
+    display: flex;
+}
+
+
+main  .cadastro #nome{
+    border: none;
+    border-radius: 20px;
+
+    width: 35%;
+    height: 20px;
+
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    
+}
+
+main  .cadastro #email{
+    border: none;
+    border-radius: 20px;
+
+    width: 35%;
+    height: 20px;
+
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+
+    
+}
+
+main .cadastro button {
+    width: 30%;
+
+    border: none;
+    border-radius: 3px;
+
+    color: #fff;
+    background-color: rgb(2, 73, 77);
+}
+
+
+
+
+
 /* RODAPE */
 
 footer{
