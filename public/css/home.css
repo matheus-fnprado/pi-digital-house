@@ -11,6 +11,14 @@ main{
     background-color: #f3f9f2;
 }
 
+/* GLOBAL */
+
+h2{
+    font-size: 18px;
+
+    padding-left: 36px;
+}
+
 /* HEADER */
 
 header {
@@ -113,15 +121,17 @@ header .navigation nav.navigation-img{
     text-transform: uppercase;
 }
 
-/* PRIMEIRO CARROSSEL */
+/* BANNER PRINCIPAIS */
 
-#carrossel-1 h2{
-    font-size: 18px;
-
-    padding-left: 36px;
+#banners{
+    height: 314px;
+    
+    background-color: #888888;
 }
 
-#carrossel-1 h3{
+/* CARROSSEL 1 */
+
+#carrossel-1h3{
     font-size: 15px;
     text-align: center;
 
@@ -129,7 +139,7 @@ header .navigation nav.navigation-img{
     margin-block: 32px;
 }
 
-#cards{
+#carrossel-1 #cards{
     display:flex;
     justify-content: center;
     align-items: center;
@@ -139,26 +149,210 @@ header .navigation nav.navigation-img{
     gap: 20px;
 }
 
-.card-produto{
+#carrossel-1 .card-produto{
     width: 281px;
-    height: 405px;
+    height: auto;
 
     background-color: #fff;
 }
 
-.card-produto img{
+#carrossel-1 .card-produto img{
     margin-top: 10px;
     margin-left: 90%;
 }
 
-.card-produto svg{
-    margin-top: 30px;
+#carrossel-1 .card-produto svg{
+    display: flex;
+    padding-top: 25px;
+    margin: 0 auto;
+}
 
+#carrossel-1 .card-produto svg.svg{
     width: 129px;
     height: 146px;
 }
 
+#carrossel-1 .card-produto h3{
+    margin-inline: 50px;
+    margin-top: 16px;
+    margin-bottom: 30px;
 
+    font-size: 16px;
+    text-align: center;
+}
+
+#carrossel-1 #cards .card-produto p{
+    padding-left: 26px;
+
+    line-height: 27px;
+}
+
+#carrossel-1 #cards .card-produto .precoDe{
+    font-size: 12px;
+
+    text-decoration: line-through;
+}
+
+#carrossel-1 #cards .card-produto .precoPor{
+    color:rgb(2, 73, 77);
+    font-weight: bold;
+    font-size: 19px;
+}
+
+#carrossel-1 .card-produto button{  
+    margin-top: 10px;
+    border: none;
+
+    width: 100%;
+    height: 40px;
+
+    color:rgb(147, 254, 2);
+    background-color: #02494D;
+
+    font-size: 16px;
+}
+
+/* CARROSSEL 2 */
+
+section:nth-child(4){
+    margin-top: 113px;
+}
+
+
+/* MINI BANNER */
+
+#mini-banner{
+    margin-top: 131px;
+}
+
+#mini-banner .estrutura-cards{
+    height: 166px;
+}
+
+#mini-banner .banners-org{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    gap: 92px;
+}
+
+#mini-banner .card-mini-banner{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 488px;
+
+    background-color: rgb(2, 73, 77);
+    color:rgb(147, 254, 2)
+}
+
+#mini-banner p{
+margin-inline: 32px;
+}
+
+#mini-banner p:nth-child(1){
+    color:rgb(255, 255, 255)
+}
+
+#mini-banner p:nth-child(2){
+    margin-top: 13px;
+}
+
+#mini-bannerimg{
+    height: auto;
+}
+
+/* DEPARTAMENTOS */
+
+#departamentos .estrutura-departamentos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 30px;
+}
+
+#departamentos .card-departamento{
+    background-color: rgb(255, 255, 255);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    height: 242px;
+    width: 290px;
+}
+
+#departamentos div h2{
+    margin-block: 91px;
+}
+
+#departamentos div p{
+    margin-bottom: 10px;
+}
+
+/* CARROSSEL 3 */
+
+section:nth-child(6){
+    margin-top: 113px;
+}
+
+/* NEWSLETTER */
+
+#newsletter .estrutura-newsletter{
+    margin-top: 90px;
+
+    height: 102px;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: #93FE02;
+}
+
+#newsletter .estrutura-newsletter h3{
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+#newsletter .estrutura-newsletter p{
+    font-size: 12px;
+}
+
+#newsletter .estrutura-newsletter #name,
+#newsletter .estrutura-newsletter #e-mail{
+    width: 253px;
+    height: 42px;
+
+    border: none;
+    border-radius: 10px;
+
+    text-align: center;
+    font-weight: bold;
+}
+
+#newsletter .estrutura-newsletter button{
+    width: 207px;
+    height: 42px;
+
+    background-color: rgb(2, 73, 77);
+    color: rgb(255, 255, 255);
+
+    border: none;
+    border-radius: 10px;
+
+    text-align: center;
+    font-weight: bold;
+}
+
+#newsletter .estrutura-newsletter button:hover{
+    background-color: rgb(11, 120, 126);
+}
 
 /* RODAPE */
 
