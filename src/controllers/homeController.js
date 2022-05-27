@@ -1,9 +1,15 @@
 const homeController = {
+    favoritos: (req, res) => {
+        res.render('home/favoritos');
+    },
     index: (req, res) => {
         res.render('home/index');
     },
-    favoritos: (req, res) => {
-        res.render('home/favoritos');
+    carrinho: (req, res) => {
+        res.render('home/meucarrinho');
+    },
+    pagamento: (req, res) => {
+        res.render('home/pagamento');
     },
     perfil: (req, res) => {
         res.render('home/perfil');
@@ -15,7 +21,7 @@ const homeController = {
         res.render('home/produtos');
     },
     quemsomos: (req, res) => {
-        res.render('home/quemsomos')
+        res.render('home/quemsomos');
     },
     segmentos: (req, res) => {
         res.render('home/segmentos');
