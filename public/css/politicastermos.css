@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+main {
+    text-align: justify;
+
+}
+
+.title{
+    font-size: 64px;
+    text-align: center;
+    color: rgb(147, 254, 2);
+    margin-bottom: 100px;
+    padding-top: 100px;
+}
+
+.text{
+    background-color: rgb(255, 255, 255);
+    margin: 100px;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: justify;
+    font-size: 25px;
+    padding: 50px;
+    margin-top: 10px;
+}
+
+.politica {
+    text-align: center;
+    font-size: 100px;
+    color: #02494D;
+    margin: 88px;
+    padding: 88px;
+    text-decoration: none;
+    background-color: rgb(255, 255, 255);
+
+
+}

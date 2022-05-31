@@ -1,0 +1,28 @@
+{
+    "produtos": [
+        {
+            "id": "1",
+            "nome": "Headset Gamer HyperX Cloud Core para PC",
+            "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat.",
+            "imagem": "https://images.kabum.com.br/produtos/fotos/115318/headset-gamer-hyperx-cloud-core-7-1-virtual-surround-drivers-53mm-hx-hscc-2-bk-ww_1595258447_gg.jpg",
+            "preco": "1000.00",
+            "ativo": true
+        },
+        {
+            "id": "2",
+            "nome": "Mouse Hyperx Pulsefire FPS Gaming",
+            "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat.",
+            "imagem": "https://images-americanas.b2w.io/produtos/01/00/img/133818/6/133818631_1SZ.jpg",
+            "preco": "159.99",
+            "ativo": true
+        },
+        {
+            "id": 3,
+            "nome": "HyperX Gaming Mouse Pad Fury, Tamanho Médio",
+            "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat.",
+            "imagem": "https://m.media-amazon.com/images/I/81++s7AGryL._AC_SL1500_.jpg",
+            "preco": "59.99",
+            "ativo": true
+        }
+    ]
+}
