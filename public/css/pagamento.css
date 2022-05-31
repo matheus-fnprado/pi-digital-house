@@ -148,7 +148,6 @@ header .navigation nav.navigation-img{
 
 .resumopedido{
     display: grid;
-    /* grid-template-columns: minmax(300px, 600px) minmax(300px, 600px); */
     grid-template-columns: 40% 30%;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     justify-content: center;
@@ -179,9 +178,8 @@ header .navigation nav.navigation-img{
     margin-top: 100px;
     display: grid;
     grid-template-columns: 20% 20% 20%;
-    grid-template-rows: 20% auto auto;
+    grid-template-rows: 30% auto auto;
     justify-content: center;
-    /* background: blue; */
     height: 700px;
 }
 .escolhaformapagamento p{
@@ -192,38 +190,139 @@ header .navigation nav.navigation-img{
 .pagamento img{
     width: 20px;
 }
+.pagamento-conteudo{
+    width: 100%;
+}
 .formapagamento{
     grid-column: 1;
     grid-row: 1;
+    width: 260px;
     max-width: 100%;
-    max-height: 70%;
-    /* background: red; */
+    max-height: 100%;
 }
-.botaopagamento label{
-    padding: 3px 30px 3px 10px;
-    /* background: red; */
+.botaopagamento input{
+    margin-bottom: 40px;
+    opacity: 0;
+}
+.botaopagamento input + label {
+    display: inline-block;
+    background:rgb(255, 255, 255);
+    color:#02494D;
+    height: 45px;
+    width: 180px;
+    border: 3px solid #02494D;
+    border-radius: 5px;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
     cursor: pointer;
+}
+.botaopagamento input + label:hover {
+    transform: scale(1.1);
+}
+.botaopagamento input:checked + label {
+    background:rgb(2, 73, 77);
+    color:rgb(147, 254, 2);
+}
+.novocartao-conteudo{
+    grid-column: 1 / 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #95fe0275;
+    border-radius: 10px;
+    padding: 10px;
+    width: 127% !important;
+}
+#nomcartao{
+    grid-column: 1 / 3;
+    grid-row: 1;
+}
+#numcartao{
+    grid-column: 1 / 3;
+    grid-row: 2;
+}
+.novocartao-conteudo input{
+    padding:5px;
+    margin: 0 5px 5px 0;
+    border-color: #02494d9f;
+    border-radius: 5px;
+}
+.novocartao-conteudo input[type="text"],
+.novocartao-conteudo input::placeholder{
+    color: #02494D;
+    font-weight: bold;
+}
+.selecioneparcelas label{
+    font-size: 1rem;
+    color:rgb(2, 73, 77);
+    font-weight: bold;
+}
+.selecioneparcelas select{
+    margin-top: 10px;
+    font-size: .8rem;
+    border-radius: 5px;
+    color:rgb(2, 73, 77);
+    height: 40px;
+    font-weight: bold;
+}
+.ce-dadoscartao{
+    background: #d6ff9c;
+    border-radius: 10px;
+    padding: 10px;
+}
+.ce-dadoscartao p{
+    margin-top: 7px;
+    text-transform: uppercase;
+    font-size: .7rem;
+    font-weight: bold;
+    color:rgb(2, 73, 77);
+}
+.ce-dadoscartao h3{
+    margin-top: 2px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color:rgb(2, 73, 77);
+}
+.cartaoexistente,
+.novocartao{
+    animation: fadein .8s ease;
+    margin-top: -15px;
+    margin-left: 30px;
+}
+.ce-dadoscartao div{
+    margin-top: 7px;
+    color:rgb(2, 73, 77);
+    font-weight: bold;
+}
+.ce-dadoscartao button{
+    margin-top: 10px;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: #02494D;
+    color: #93FE02;
+    border: none;
+    border-radius: 10px;
+}
+.botoesfinalizar{
+    align-items: end;
+}
+.botoesfinalizar button{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.botoesfinalizar button:hover,
+.ce-dadoscartao button:hover{
+    transform: scale(1.1);
 }
 .formapagamento .fp-tipo:nth-child(2) label{
     padding-right: 140px;
-}
-.botaopagamento input:checked{
-    background: white;
 }
 .formapagamento h2{
     margin: 0px;
     font-size: 1rem;
     text-transform: uppercase;
     padding: 0px;
-}
-.botaopagamento{
-    background:rgb(2, 73, 77);
-    color: #93FE02;
-    margin-top: 10px;
-    border: 5px solid rgb(2, 73, 77);
-    border-radius: 10px;
-    width: 300px;
-    max-height: 30px;
 }
 .pagamento-conteudo{
     grid-column: 1;
@@ -239,6 +338,7 @@ header .navigation nav.navigation-img{
     /* background: red; */
     height: 100px;
     align-content: start;
+    animation: fadein .8s ease;
 }
 .textopagamento h3{
     margin-bottom: 20px;
@@ -252,10 +352,12 @@ header .navigation nav.navigation-img{
 .novocartao-conteudo{
     display: none;
     margin-top: 20px;
+    animation: fadein .8s ease;
 }
 .cartaoexistente-conteudo{
     display: none;
     margin-top: 20px;
+    animation: fadein .8s ease;
 }
 .textopagamento{
     display: none;
@@ -273,39 +375,32 @@ header .navigation nav.navigation-img{
     from { opacity: 0; }
     to   { opacity: 1; }
 }
-
-
-
-
-
-
-
-
 .totalcompra{
     margin: 50px 0px;
     grid-column: 2;
     font-weight: bold;
     text-align: center;
+    animation: fadein .8s ease;
 }
 .descontopix{
     margin: 50px 0px;
     grid-column: 3;
     font-weight: bold;
     text-align: center;
+    animation: fadein .8s ease;
 }
 .descontopix p:nth-child(3){
     font-size: 12px;
 }
-
 .totalcompra span,
 .descontopix span{
     font-size: 32px;
 }
-
 .botoesfinalizar{
     grid-column: 3;
     display: flex;
     gap: 20px;
+    animation: fadein .8s ease;
 }
 .botoesfinalizar button{
     margin-top: 10px;
