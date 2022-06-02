@@ -1,9 +1,127 @@
 <!DOCTYPE html>
 <%- include('../partials/head') %>
+<link rel="stylesheet" href="/css/meusdados.css">
 
 <body>
 
     <%- include('../partials/header') %>
+
+    <main>
+        <div class="titulo">
+            <img src="/img/iconedados.svg" alt="Ícone dados">
+            <h1>MEUS DADOS</h1>
+        </div>
+
+        <section class="meusdados" id="meusdados">
+            <div class="dadosbasicos">
+                <div class="db-titulo2">
+                    <img src="/img/iconedados.svg" alt="Ícone dados">
+                    <h2>Dados Básicos</h2>
+                    <button>Alterar Senha</button>
+                </div>
+                <form class="db-dados">
+                    <div>
+                        <label for="nomecompleto">Nome Completo*</label>
+                        <br>
+                        <input type="text" id="nomecompleto" name="nomecompleto" placeholder="Fulano de Talvez">
+                    </div>
+                    <div>
+                        <label for="email-login">E-mail/Login*</label>
+                        <br>
+                        <input type="email" id="email-login" name="email-login" placeholder="fulanodetalvez@gmail.com">
+                        <img src="/img/iconecadeado.svg" alt="Ícone cadeado">
+                    </div>
+                    <div>
+                        <label for="cadastropf">CPF*</label>
+                        <br>
+                        <input type="number" id="cadastropf" name="cadastropf" placeholder="xxx.xxx.xxx-xx">
+                        <img src="/img/iconecadeado.svg" alt="Ícone cadeado">
+                    </div>
+                    <div>
+                        <label for="registrogeral">RG*</label>
+                        <br>
+                        <input type="number" id="registrogeral" name="registrogeral" placeholder="5567890345">
+                    </div>
+                    <div>
+                        <label for="sexo">Sexo*</label>
+                        <br>
+                        <input type="radio" id="masculino" name="sexo">
+                        <label for="masculino">Masculino</label>
+                        <input type="radio" id="feminino" name="sexo">
+                        <label for="feminino">Feminino</label>
+                        <input type="radio" id="naoresponder" name="sexo">
+                        <label for="naoresponder">Prefiro não informar</label>
+                    </div>
+                    <div>
+                        <label for="datanascimento">Data nascimento</label>
+                        <br>
+                        <input type="date" id="datanascimento" name="datanascimento">
+                    </div>
+                    <div>
+                        <label for="telefonecontato">Telefone para Contato</label>
+                        <br>
+                        <input type="tel" id="telefonecontato" name="telefonecontato">
+                    </div>
+                    <div>
+                        <label for="telefonecelular">Telefone Celular</label>
+                        <br>
+                        <input type="tel" id="telefonecontato" name="telefonecontato">
+                    </div>
+                    <br>
+                    <div>
+                        <input type="checkbox" id="receberemails" name="receberemails">
+                        <label for="receberemails">Quero receber ofertas e novidades por e-mail, SMS, Whatsapp ou
+                            Mensagens!</label>
+                    </div>
+                </form>
+                <button class="botaosalvar" type="submit">Salvar</button>
+
+            </div>
+            <div class="endereco">
+                <div class="ed-titulo2">
+                    <img src="/img/iconelocalizacao.svg" alt="Ícone localização">
+                    <h2>Endereços</h2>
+                    <button>Adicionar Endereço</button>
+                </div>
+                <div class="ed-principal">
+                    <ul class="dadosend01">
+                        <h3>Endereço Principal</h3>
+                        <p>Rua dos Bobos N107</p>
+                        <p>CEP XXXXX-XXX</p>
+                        <p>Caldas Quentes - XX</p>
+                    </ul>
+                    <div class="botoesend01">
+                        <button>Alterar</button>
+                        <button>Excluir</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="mini-banner">
+            <div class="banners-org">
+                <div class="estrutura-cards">
+                    <div class="card-mini-banner">
+                        <div>
+                            <p>OFERTA ESPECIAL DE CONSOLE PS5</p>
+                            <p>34% OFF</p>
+                        </div>
+                        <img src="/img/mini-1.png">
+                    </div>
+                </div>
+                <div class="estrutura-cards">
+                    <div class="card-mini-banner">
+                        <div>
+                            <p>MONITOR GAMER COM</p>
+                            <p>40% OFF</p>
+                        </div>
+                        <img src="/img/mini-2.png">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
 
     <%- include('../partials/footer') %>
 

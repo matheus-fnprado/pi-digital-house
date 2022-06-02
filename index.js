@@ -17,8 +17,9 @@ app.use(express.json()); // responsavel pela conversão do inputs para json ou j
 app.use(homeRouter);
 app.use(loginRouter);
 app.use(produtosRouter);
+
 app.use((req, res, next) => {
-    return res.status(404).render('home/error404.ejs');
+    return res.status(404).render('home/error404.ejs', { title: 'Error 404' });
 })
 
 app.listen(port, () => console.log("Servidor rodando na porta:" + port));
