@@ -8,6 +8,7 @@
     <title>Home</title>
 </head>
 <body>
+
     <header>
         <div class="logo">
             <img src="./public/img/LOGO.png">
@@ -55,39 +56,48 @@
 
     <main>
         <div class="titulo">
-            <img src="./public/img/iconedados.svg" alt="Ícone dados">
-            <h1>MEUS DADOS</h1>
+            <img src="./public/img/iconelogin.svg" alt="Ícone login">
+            <h1>IDENTIFICAÇÃO</h1>
         </div>
 
         <section class="meusdados" id="meusdados">
             <div class="dadosbasicos">
                  <div class="db-titulo2">
-                     <img src="./public/img/iconedados.svg" alt="Ícone dados">
-                     <h2>Dados Básicos</h2>
-                     <button>Alterar Senha</button>
+                     <img src="./public/img/iconecadastrar.svg" alt="Ícone dados">
+                     <h2>Quero me Cadastrar</h2>
                  </div>
                  <form class="db-dados">
                     <div>
                         <label for="nomecompleto">Nome Completo*</label>
                         <br>
-                        <input type="text" id="nomecompleto" name="nomecompleto" placeholder="Fulano de Talvez">
+                        <input type="text" id="nomecompleto" name="nomecompleto" placeholder="Nome Completo">
                     </div>
                     <div>
                         <label for="email-login">E-mail/Login*</label>
                         <br>
-                        <input type="email" id="email-login" name="email-login" placeholder="fulanodetalvez@gmail.com">
-                        <img src="./public/img/iconecadeado.svg" alt="Ícone cadeado">
+                        <input type="email" id="email-login" name="email-login" placeholder="email@email.com">
                     </div>
                     <div>
                         <label for="cadastropf">CPF*</label>
                         <br>
                         <input type="number" id="cadastropf" name="cadastropf" placeholder="xxx.xxx.xxx-xx">
+                    </div>
+                    <div>
+                        <label for="senha">Crie sua senha*</label>
+                        <br>
+                        <input type="password" id="senha" name="senha" placeholder="6 dígitos ou mais">
                         <img src="./public/img/iconecadeado.svg" alt="Ícone cadeado">
                     </div>
                     <div>
-                        <label for="registrogeral">RG*</label>
+                        <label for="senha">Confirme sua senha*</label>
                         <br>
-                        <input type="number" id="registrogeral" name="registrogeral" placeholder="5567890345">
+                        <input type="password" id="senha" name="senha" placeholder="6 dígitos ou mais">
+                        <img src="./public/img/iconecadeado.svg" alt="Ícone cadeado">
+                    </div>
+                    <div>
+                        <label for="cependereco">CEP*</label>
+                        <br>
+                        <input type="number" id="cependereco" name="cependereco" placeholder="Cep">
                     </div>
                     <div>
                         <label for="sexo">Sexo*</label>
@@ -100,45 +110,48 @@
                         <label for="naoresponder">Prefiro não informar</label>
                     </div>
                     <div>
-                        <label for="datanascimento">Data nascimento</label>
+                        <label for="datanascimento">Data nascimento*</label>
                         <br>
                         <input type="date" id="datanascimento" name="datanascimento">
                     </div>
                     <div>
-                        <label for="telefonecontato">Telefone para Contato</label>
+                        <label for="telefonecelular">Telefone Celular*</label>
                         <br>
-                        <input type="tel" id="telefonecontato" name="telefonecontato">
-                    </div>
-                    <div>
-                        <label for="telefonecelular">Telefone Celular</label>
-                        <br>
-                        <input type="tel" id="telefonecontato" name="telefonecontato">
+                        <input type="tel" id="telefonecontato" name="telefonecontato" placeholder="Celular">
                     </div>
                     <br>
                     <div>
                         <input type="checkbox" id="receberemails" name="receberemails">
                         <label for="receberemails">Quero receber ofertas e novidades por e-mail, SMS, Whatsapp ou Mensagens!</label>
                     </div>
+                    <div class="botaosalvar" >
+                        <button type="submit"><img src="./public/img/iconecadastrar2verde.svg" alt=""> Cadastrar</button>
+                    </div>
                 </form>
-                 <button class="botaosalvar" type="submit">Salvar</button>
-
+                
             </div>
             <div class="endereco">
                 <div class="ed-titulo2">
-                    <img src="./public/img/iconelocalizacao.svg" alt="Ícone localização">
-                    <h2>Endereços</h2>
-                    <button>Adicionar Endereço</button>
+                    <img src="./public/img/iconejacadastro.svg" alt="Ícone login">
+                    <h2>Já tenho Cadastro</h2>
                 </div>
                 <div class="ed-principal">
-                    <ul class="dadosend01">
-                        <h3>Endereço Principal</h3>
-                        <p>Rua dos Bobos N107</p>
-                        <p>CEP XXXXX-XXX</p>
-                        <p>Caldas Quentes - XX</p>
-                    </ul>
+                    <div>
+                        <label for="login">E-mail ou CPF*</label>
+                        <br>
+                        <input type="text" id="login" name="login" placeholder="E-mail ou CPF">
+                    </div>
+                    <div>
+                        <label for="senhalogin">Senha*</label>
+                        <br>
+                        <input type="password" id="senhalogin" name="senhalogin" placeholder="Senha">
+                    </div>
+                    <div class="botaologin">
+                    <button  type="submit"><img src="./public/img/iconeentrarverde.svg" alt="">Entrar</button>
+                    </div>    
                     <div class="botoesend01">
-                        <button>Alterar</button>
-                        <button>Excluir</button>
+                        <button>Esqueci meu Login</button>
+                        <button>Esqueci minha Senha</button>
                     </div>
                 </div>
             </div>    
