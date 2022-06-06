@@ -167,7 +167,6 @@ metodoPagamento()
 // NÃO ESTÁ COMPLETA, FUNCIONANDO SÓ O BÁSICO;
 function similares() {
   const botoesTroca = document.querySelectorAll(".pi-similares-container button");
-  const similaresItems = document.querySelectorAll(".pi-similares-items div");
   const similaresContainer = document.querySelector(".pi-similares-items");
 
   function trocarOrdem(event) {
@@ -176,7 +175,7 @@ function similares() {
   }
 
   function eventoBotao(img) {
-    img.addEventListener("click", trocarOrdem);
+    img.addEventListener("mouseover", trocarOrdem);
 }
 botoesTroca.forEach(eventoBotao);
 
