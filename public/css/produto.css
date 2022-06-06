@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 :root {
     --c-azul-1: rgb(2, 73, 77);
+    --c-azul-2: rgb(3, 131, 138);
     --c-verde-1: rgb(147, 254, 2);
     --c-verde-2: #d6ff9c;
     --c-preto-1: rgb(0, 0, 0);
@@ -266,18 +267,25 @@ a{
     /* background: green; */
     overflow-x: hidden;
     overflow-y: hidden;
-    max-width: 75%;
+    max-width: 90%;
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
 }
+.pi-similares-items img{
+    max-width: 90px;
+}
 .pi-similares-items div{
     margin: 5px;
-    display: block;
+    display: none;
+}
+.pi-similares-items div:nth-child(-n+4){
+    display: block !important;
 }
 .pi-similares-items div{
     cursor: pointer;
+    animation: slideDown .5s forwards;
 }
 .pi-similares-items div:hover{
     transform: scale(1.1);
@@ -286,7 +294,6 @@ a{
     font-size: .8rem;
     font-weight: bold;
 }
-
 .calcula-frete{
     grid-column: 1;
     grid-row: 2;
@@ -343,8 +350,13 @@ a{
     justify-content: center;
     margin: 30px 0 30px 0;
 }
+.descricao img{
+    max-width: 30px;
+    margin-right: 20px;
+}
 .descricao-produtos{
-    background: white;
+    background-color: #d6ff9c9f;
+    background-image: linear-gradient(0deg, #d6ff9c09 0%, #ffffff 100%);    
     padding: 30px;
     box-shadow: 2px 2px 3px rgb(187, 187, 187);
     border-radius: 20px;
@@ -352,13 +364,22 @@ a{
 .descricao-produtos.active{
     background:rgba(149, 254, 2, 0.274);
 }
+.indicador-acc1.active,
+.indicador-acc2.active,
+.indicador-acc3.active,
+.indicador-acc4.active{
+    transform: rotate(180deg);  
+}
 .descricao-produtos dt{
     padding: 0px;
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
 }
 .descricao-produtos h2{
     padding: 0px;
     margin-bottom: 20px;
+    display: flex;
 }
 .descricao-produtos h3{
     margin-bottom: 20px;
@@ -377,22 +398,31 @@ a{
     justify-content: center;
     margin: 30px 0 30px 0;
 }
+.info-tecnica img{
+    max-width: 30px;
+    margin-right: 20px;
+}
 .info-tecnica-produto{
-    background: white;
+    background-color: #d6ff9c9f;
+    background-image: linear-gradient(0deg, #d6ff9c09 0%, #ffffff 100%);    
     padding: 30px;
     box-shadow: 2px 2px 3px rgb(187, 187, 187);
     border-radius: 20px;
 }
 .info-tecnica-produto.active{
     background:rgba(149, 254, 2, 0.274);
+    min-height: 660px;
 }
 .info-tecnica-produto dt{
     padding: 0px;
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
 }
 .info-tecnica-produto h2{
     padding: 0px;
     margin-bottom: 20px;
+    display: flex;
 }
 .info-tecnica-produto h3{
     margin-bottom: 20px;
@@ -411,8 +441,13 @@ a{
     justify-content: center;
     margin: 30px 0 30px 0;
 }
+.avaliacao img{
+    max-width: 30px;
+    margin-right: 20px;
+}
 .avaliacao-usuarios{
-    background: white;
+    background-color: #d6ff9c9f;
+    background-image: linear-gradient(0deg, #d6ff9c09 0%, #ffffff 100%);    
     padding: 30px;
     box-shadow: 2px 2px 3px rgb(187, 187, 187);
     border-radius: 20px;
@@ -423,10 +458,13 @@ a{
 .avaliacao-usuarios dt{
     padding: 0px;
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
 }
 .avaliacao-usuarios h2{
     padding: 0px;
     margin-bottom: 20px;
+    display: flex;
 }
 .avaliacao-usuarios h3{
     margin-bottom: 20px;
@@ -446,8 +484,13 @@ a{
     margin: 30px 0 30px 0;
     margin-top: 0px !important;
 }
+.faq-produto img{
+    max-width: 30px;
+    margin-right: 20px;
+}
 .perguntas-respostas{
-    background: white;
+    background-color: #d6ff9c9f;
+    background-image: linear-gradient(0deg, #d6ff9c09 0%, #ffffff 100%);    
     padding: 30px;
     box-shadow: 2px 2px 3px rgb(187, 187, 187);
     border-radius: 20px;
@@ -458,10 +501,13 @@ a{
 .perguntas-respostas dt{
     padding: 0px;
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
 }
 .perguntas-respostas h2{
     padding: 0px;
     margin-bottom: 20px;
+    display: flex;
 }
 .perguntas-respostas h3{
     margin-bottom: 20px;
@@ -473,6 +519,110 @@ a{
     display: block;
     animation: slideDown .5s forwards;
 }
+
+/* MODAL FORMAS DE PAGAMENTO */
+
+.modal-container{
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.modal-container.ativo{
+    display: flex;
+}
+.modal{
+    background: var(--c-verde-2);
+    min-width: 300px;
+    padding: 40px;
+    min-height: 350px;
+    box-shadow: 0 0 0px 10px white;
+    position: relative;
+    border-radius: 10px;
+}
+.modal h2{
+    padding: 0px;
+}
+@keyframes modal{
+    from {
+        opacity: 0;
+        transform: translate3d(0, -30px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+.ativo .modal{
+    animation: modal .3s forwards;
+}
+.fechar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid white;
+    top: -30px;
+    right: -30px;
+    position: absolute;
+    background: var(--c-azul-1);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .3);
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+}
+.modal button[type="button"]{
+    background: var(--c-azul-1);
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    padding: .7rem 2rem;
+    font-size: 1rem;
+    color: white;
+    margin-top: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.modal button[type="button"].ativo{
+    color: var(--c-verde-2);
+    background: var(--c-azul-2);
+}
+.modal-op-pagamento-cartao,
+.modal-op-pagamento-pix,
+.modal-op-pagamento-boleto{
+    margin-top: 50px;
+    display: none;
+}
+.modal-op-pagamento-cartao.ativo,
+.modal-op-pagamento-pix.ativo,
+.modal-op-pagamento-boleto.ativo{
+    display: block;
+    animation: slideDown .5s forwards;
+}    
+.modal-op-pagamento-cartao div{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.modal-op-pagamento-cartao span{
+    font-weight: bold;
+}
+.modal-op-pagamento-pix span{
+    font-weight: bold;
+    font-size: 2rem;
+}
+.modal-op-pagamento-boleto span{
+    font-weight: bold;
+    font-size: 2rem;
+}
+modal
 /* MINI BANNER */
 
 #mini-banner{
