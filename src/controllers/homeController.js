@@ -8,11 +8,14 @@ const homeController = {
   carrinho: (req, res) => {
     res.render("home/meucarrinho", { title: "Meu Carrinho" });
   },
+  meusdados: (req, res) => {
+    res.render("home/meusdados", { title: "Meus Dados" });
+  },
   pagamento: (req, res) => {
     res.render("home/pagamento", { title: "Pagamento" });
   },
   perfil: (req, res) => {
-    res.render("home/perfil", { title: "Perfil" });
+    res.render("home/perfil", { title: "Meu Perfil" });
   },
   politicas: (req, res) => {
     res.render("home/politica", { title: "Políticas de privacidade" });
@@ -25,6 +28,9 @@ const homeController = {
   },
   segmentos: (req, res) => {
     res.render("home/segmentos", { title: "Segmentos" });
+  },
+  suporte: (req, res) => {
+    res.render("home/suporte", { title: "Suporte" });
   },
   termos: (req, res) => {
     res.render("home/termos", { title: "Termos de uso" });
