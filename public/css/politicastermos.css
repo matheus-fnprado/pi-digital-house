@@ -48,3 +48,28 @@ main {
 
 
 }
+
+.imagemsobrenos {
+    text-align: center;
+}
+
+.titulo {
+    text-align: center;
+}
+
+.logoquemsomos {
+    padding-top: 88px;
+}
+   
+.textoquemsomos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        text-align: justify;
+        font-size: 25px;
+        padding: 50px;
+        margin: 88px;
+        background-color: white;
+}
