@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<%- include('../partials/head') %>
+<link rel="stylesheet" href="/css/meusdados.css">
+
+<body>
+
+    <%- include('../partials/header') %>
+
+    <main>
+        <div class="titulo">
+            <img src="/img/iconelogin.svg" alt="Ícone login">
+            <h1>IDENTIFICAÇÃO</h1>
+        </div>
+
+        <section class="meusdados" id="meusdados">
+            <div class="dadosbasicos">
+                <div class="db-titulo2">
+                    <img src="/img/iconecadastrar.svg" alt="Ícone dados">
+                    <h2>Quero me Cadastrar</h2>
+                </div>
+                <form class="db-dados">
+                    <div>
+                        <label for="nomecompleto">Nome Completo*</label>
+                        <br>
+                        <input type="text" id="nomecompleto" name="nomecompleto" placeholder="Nome Completo">
+                    </div>
+                    <div>
+                        <label for="email-login">E-mail/Login*</label>
+                        <br>
+                        <input type="email" id="email-login" name="email-login" placeholder="email@email.com">
+                    </div>
+                    <div>
+                        <label for="cadastropf">CPF*</label>
+                        <br>
+                        <input type="number" id="cadastropf" name="cadastropf" placeholder="xxx.xxx.xxx-xx">
+                    </div>
+                    <div>
+                        <label for="senha">Crie sua senha*</label>
+                        <br>
+                        <input type="password" id="senha" name="senha" placeholder="6 dígitos ou mais">
+                        <img src="/img/iconecadeado.svg" alt="Ícone cadeado">
+                    </div>
+                    <div>
+                        <label for="senha">Confirme sua senha*</label>
+                        <br>
+                        <input type="password" id="senha" name="senha" placeholder="6 dígitos ou mais">
+                        <img src="/img/iconecadeado.svg" alt="Ícone cadeado">
+                    </div>
+                    <div>
+                        <label for="cependereco">CEP*</label>
+                        <br>
+                        <input type="number" id="cependereco" name="cependereco" placeholder="Cep">
+                    </div>
+                    <div>
+                        <label for="sexo">Sexo*</label>
+                        <br>
+                        <input type="radio" id="masculino" name="sexo">
+                        <label for="masculino">Masculino</label>
+                        <input type="radio" id="feminino" name="sexo">
+                        <label for="feminino">Feminino</label>
+                        <input type="radio" id="naoresponder" name="sexo">
+                        <label for="naoresponder">Prefiro não informar</label>
+                    </div>
+                    <div>
+                        <label for="datanascimento">Data nascimento*</label>
+                        <br>
+                        <input type="date" id="datanascimento" name="datanascimento">
+                    </div>
+                    <div>
+                        <label for="telefonecelular">Telefone Celular*</label>
+                        <br>
+                        <input type="tel" id="telefonecontato" name="telefonecontato" placeholder="Celular">
+                    </div>
+                    <br>
+                    <div>
+                        <input type="checkbox" id="receberemails" name="receberemails">
+                        <label for="receberemails">Quero receber ofertas e novidades por e-mail, SMS, Whatsapp ou
+                            Mensagens!</label>
+                    </div>
+                    <div class="botaosalvar">
+                        <button type="submit"><img src="/img/iconecadastrar2verde.svg" alt="">
+                            Cadastrar</button>
+                    </div>
+                </form>
+
+            </div>
+            <div class="endereco">
+                <div class="ed-titulo2">
+                    <img src="/img/iconejacadastro.svg" alt="Ícone login">
+                    <h2>Já tenho Cadastro</h2>
+                </div>
+                <div class="ed-principal">
+                    <div>
+                        <label for="login">E-mail ou CPF*</label>
+                        <br>
+                        <input type="text" id="login" name="login" placeholder="E-mail ou CPF">
+                    </div>
+                    <div>
+                        <label for="senhalogin">Senha*</label>
+                        <br>
+                        <input type="password" id="senhalogin" name="senhalogin" placeholder="Senha">
+                    </div>
+                    <div class="botaologin">
+                        <button type="submit"><img src="/img/iconeentrarverde.svg" alt="">Entrar</button>
+                    </div>
+                    <div class="botoesend01">
+                        <button>Esqueci meu Login</button>
+                        <button>Esqueci minha Senha</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="mini-banner">
+            <div class="banners-org">
+                <div class="estrutura-cards">
+                    <div class="card-mini-banner">
+                        <div>
+                            <p>OFERTA ESPECIAL DE CONSOLE PS5</p>
+                            <p>34% OFF</p>
+                        </div>
+                        <img src="/img/mini-1.png">
+                    </div>
+                </div>
+                <div class="estrutura-cards">
+                    <div class="card-mini-banner">
+                        <div>
+                            <p>MONITOR GAMER COM</p>
+                            <p>40% OFF</p>
+                        </div>
+                        <img src="/img/mini-2.png">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <%- include('../partials/footer') %>
+
+</body>
+
+</html>

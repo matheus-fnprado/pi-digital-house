@@ -5,8 +5,10 @@
 <body>
 
     <%- include('../partials/header') %>
-    <main>
 
+
+
+    <main>
         <div class="titulo">
             <img src="/img/iconecartao.svg" alt="Ícone carrinho">
             <h1>PAGAMENTO</h1>
@@ -14,43 +16,100 @@
 
         <section class="pagamento">
 
-            <div class="escolhaformapagamento">
-                <button><img src="/img/iconepix.svg" alt="">
-                    <p>PIX</p>
-                </button>
-                <button><img src="/img/iconeboleto.svg" alt="">
-                    <p>Boleto Bancário</p>
-                </button>
-                <button><img src="/img/iconecartao.svg" alt="">
-                    <p>Cartão de Crédito</p>
-                </button>
+            <div class="formapagamento">
+
+                <div class="botaopagamento fp-tipo">
+                    <input type="radio" name="tipo" value="pix" id="pix" checked>
+                    <label for="pix">PIX</label>
+                </div>
+
+                <div class="botaopagamento fp-tipo">
+                    <input type="radio" name="tipo" value="boleto" id="boleto">
+                    <label for="boleto">Boleto</label>
+                </div>
+
+                <div class="botaopagamento fp-tipo">
+                    <input type="radio" name="tipo" value="cartao" id="cartao">
+                    <label for="cartao">Cartão de Crédito</label>
+                </div>
+            </div>
+
+            <div class="pagamento-conteudo" id="pagamento-cartao">
+
+                <div class="botaopagamento cartaoexistente">
+                    <input type="radio" name="tipocartao" value="cartaoexistente" id="cartaoexistente">
+                    <label for="cartaoexistente">Novo Cartão</label>
+                </div>
+
+                <div class="botaopagamento novocartao">
+                    <input type="radio" name="tipocartao" value="novocartao" id="novocartao">
+                    <label for="novocartao">Cartão Existente</label>
+                </div>
+
+                <div class="novocartao-conteudo">
+                    <input type="text" id="nomcartao" name="nomcartao" placeholder="Nome impresso no cartão">
+                    <input type="text" id="numcartao" name="numcartao" placeholder="Número do cartão">
+                    <input type="text" id="valcartao" name="valcartao" placeholder="Validade">
+                    <input type="text" id="cvvcartao" name="cvvcartao" placeholder="CVV">
+                    <input type="text" id="cpf" name="cpf" placeholder="CPF">
+                    <input type="text" id="datanasc" name="datanasc" placeholder="Data nascimento">
+                    <div class="nc-sparcelas selecioneparcelas">
+                        <label for="quantparcelas">Forma de pagamento:</label>
+                        <select id="quantparcelas">
+                            <option value="parcela1x" selected>À vista - 10% de desconto - R$ xxx,xx</option>
+                            <option value="parcela2x">2x de R$ xxx,xx - 5% de desconto - R$ xxx,xx</option>
+                            <option value="parcela3x">3x de R$ xxx,xx - Valor total R$ xxx,xx</option>
+                            <option value="parcela4x">4x de R$ xxx,xx - Valor total R$ xxx,xx</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="cartaoexistente-conteudo ">
+                    <div class="ce-dadoscartao">
+                        <h3>Cartão Final XXXX</h3>
+                        <p>Nome XXX XXX XXX</p>
+                        <p>Número XXXX-XXXX-XXXX-7894</p>
+                        <p>Validade 08/28</p>
+                        <p>CPF 012-344-567-90</p>
+                        <p>Nascimento XX/XXXX</p>
+                        <div>
+                            <label for="cvvcartao">Confirme o CVV do seu cartão:</label>
+                            <input type="text" id="cvvcartao" name="cvvcartao" placeholder="CVV">
+                        </div>
+                        <div class="ce-sparcelas selecioneparcelas">
+                            <label for="quantparcelas">Forma de pagamento:</label>
+                            <select id="quantparcelas">
+                                <option value="parcela1x" selected>À vista - 10% de desconto - R$ xxx,xx</option>
+                                <option value="parcela2x">2x de R$ xxx,xx - 5% de desconto - R$ xxx,xx</option>
+                                <option value="parcela3x">3x de R$ xxx,xx - Valor total R$ xxx,xx</option>
+                                <option value="parcela4x">4x de R$ xxx,xx - Valor total R$ xxx,xx</option>
+                            </select>
+                        </div>
+                        <button>Gerenciar meus cartões</button>
+                    </div>
+                </div>
+
             </div>
 
             <div class="titulopagamento">
-                <div class="pagamentopix">
+
+                <div class="textopagamento txtp1 active3">
                     <h3>Pix <br> A melhor opção para suas compras à vista!
                     </h3>
                     <p>Pague com PIX e aproveite até 15% OFF. Nessa modalidade, seu pedido é aprovado instantaneamente,
                         o que torna a expedição do seu pedido ainda mais rápida.
-                        <br><br>O que você precisa saber antes de pagar por PIX:
-                        É necessário possuir uma chave PIX cadastrada no seu Banco;
-                        Com o seu celular, basta escanear o QR Code ou copiar o código para efetivar a compra;
-                        O pagamento é processado e debitado do valor em sua conta corrente;
-                        Como padrão, o Banco Central limitou os pagamentos no período das 20h às 06h, a valores de até
-                        R$1.000. Mas você
-                        pode solicitar o aumento do limite deste período diretamente com o seu banco, pela Central de
-                        Atendimento ou
-                        APP. O prazo de liberação é de até 48h.
                     </p>
                 </div>
-                <div class="pagamentoboleto">
+
+                <div class="textopagamento txtp2">
                     <h3>Boleto Bancário
                     </h3>
                     <p>Boleto tem até 15% de desconto* na compra e é a forma de pagamento que recebe o maior desconto
                         sob o valor total da compra. Esta é a forma mais vantajosa para quem deseja pagar à vista.
                     </p>
                 </div>
-                <div class="pagamentocartao">
+
+                <div class="textopagamento txtp3">
                     <h3>Cartão de Crédito
                     </h3>
                     <p>À vista com até 10% de desconto* ou tudo em até 10x sem juros!
@@ -58,6 +117,7 @@
                         Diners - Todos em até 10x sem juros ou com desconto em até 3x!
                     </p>
                 </div>
+
             </div>
 
             <div class="totalcompra">
@@ -104,9 +164,12 @@
             </div>
 
         </section>
+    </main>
 
 
-        <%- include('../partials/footer') %>
+    <%- include('../partials/footer') %>
+
+    <script type="text/javascript" src="/js/pagamento.js"></script>
 
 </body>
 

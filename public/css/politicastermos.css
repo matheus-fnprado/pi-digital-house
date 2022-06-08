@@ -49,4 +49,35 @@ main {
     color: #02494D;
 
     text-decoration: none;
+<<<<<<< HEAD
+=======
+    background-color: rgb(255, 255, 255);
+
+
+}
+
+.imagemsobrenos {
+    text-align: center;
+}
+
+.titulo {
+    text-align: center;
+}
+
+.logoquemsomos {
+    padding-top: 88px;
+}
+   
+.textoquemsomos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        text-align: justify;
+        font-size: 25px;
+        padding: 50px;
+        margin: 88px;
+        background-color: white;
+>>>>>>> 74fe34bdc06e06b61bca9d78a5bc33f3324457fb
 }
