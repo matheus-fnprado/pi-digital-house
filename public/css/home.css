@@ -396,13 +396,7 @@ section:nth-child(6){
 
 /* NEWSLETTER */
 
-<<<<<<< HEAD
 #newsletter .estrutura-newsletter{
-=======
-.estrutura-newsletter{
-    margin-top: 90px;
-
->>>>>>> 74fe34bdc06e06b61bca9d78a5bc33f3324457fb
     height: 102px;
     
     display: flex;
