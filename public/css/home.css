@@ -251,9 +251,9 @@ header .navigation nav.navigation-img{
 
 /* CARROSSEL 2 */
 
-section:nth-child(4){
+/* section:nth-child(4){
     margin-top: 113px;
-}
+} */
 
 
 /* MINI BANNER */
@@ -344,13 +344,13 @@ margin-inline: 32px;
 
 section:nth-child(6){
     margin-top: 113px;
+
+    margin-bottom: 90px;
 }
 
 /* NEWSLETTER */
 
 #newsletter .estrutura-newsletter{
-    margin-top: 90px;
-
     height: 102px;
     
     display: flex;
