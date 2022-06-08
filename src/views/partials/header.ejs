@@ -8,28 +8,38 @@
     <div class="busca">
         <form>
             <label for="search"></label>
-            <input type="text" id="search" name="search" placeholder="Busque Aqui">
+            <input class="search" type="text" id="search" name="search" placeholder="Busque Aqui">
+            <button class="button-search"><img src="/img/iconebuscar.svg" alt=""></button>
         </form>
     </div>
 
     <div class="login">
         <a href="/perfil">
-        <img src="/img/Vector.png">
+        <img src="/img/iconeminhaconta.svg">
         </a>
         <a href="/meusdados">Faça <span>login</span> ou crie<br>seu <span>cadastro</span></a>
     </div>
 
     <div class="navigation">
-        <nav>
+        <nav class="menunormal">
             <a href="/suporte">
-            <img class="navigation-img" src="/img/live support agent headset.png">
+            <img src="/img/iconeatendimento.svg">
             </a>
             <a href="/favoritos">
-                <img class="navigation-img" src="/img/Heart.png">
+                <img src="/img/iconefavoritos.svg">
             </a>
             <a href="/carrinho">
-                <img class="navigation-img" src="/img/Vector-1.png">
+                <img src="/img/iconecarrinho3.svg">
             </a>
+        </nav>
+        <nav class="menuhamburguer">
+            <button class="botao-menu-hamburguer" data-menu="button"><img src="/img/iconemenu2.svg" alt=""></button>
+            <ul data-menu="list" class="menu-mobile">
+                <li><a href="/suporte"><img src="/img/iconeatendimento.svg" alt=""></a></li>
+                <li><a href="/favoritos"><img src="/img/iconefavoritos.svg" alt=""></a></li>
+                <li><a href="/carrinho"><img src="/img/iconecarrinho3.svg" alt=""></a></li>
+                <li><a href="/segmentos"><img src="/img/iconefiltro.svg" alt=""></a></li>
+            </ul>
         </nav>
     </div>
 </header>
@@ -49,5 +59,9 @@
                 <a href="">Ofertas</a>
             </nav>
         </div>
+        <div>
+
+        </div>
     </div>
+<script type="text/javascript" src="/js/header.js"></script>
 </section>
