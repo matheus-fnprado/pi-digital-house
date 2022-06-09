@@ -20,7 +20,7 @@
 }
 
 main{
-    background-color: rgb(243, 249, 242);
+    background-color: var(--c-backg-1);
 }
 
 h1{
@@ -37,10 +37,9 @@ h2{
 header{
     background-color: rgb(2, 73, 77);
     color: rgb(255, 255, 255);
+    box-sizing: border-box;
     width: 100%;
     height: 144px;
-    border: 1px solid rgb(0, 0, 0);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -163,6 +162,7 @@ header{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .all-categories{
     padding: 0px 20px;
@@ -171,6 +171,7 @@ header{
 }
 .all-categories a{
     font-weight: bold;
+    color: black;
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -197,28 +198,42 @@ header{
 /* BANNER PRINCIPAIS */
 
 #banners{
-    height: 314px;
-    
-    background-color: #888888;
+    height: 100%;
 }
+.background-image{
+    display: none;
+    width: 100%;
+}
+.background-image.ativo {
+    display: block;
+}
+.background-image-mobile {
+    display: none;
+    width: 100%;
+}
+
 
 /* CARROSSEL 1 */
 
-#carrossel-1h3{
-    font-size: 15px;
-    text-align: center;
-
-    margin-inline: 60px;
-    margin-block: 32px;
+#carrossel-1 h2,
+#departamentos h2{
+    background-color: #02494d;
+    background-image: linear-gradient(90deg, #02494d 0%, #95fe02 100%);
+    height: 50px;
+    font-size: 1.3rem;
+    line-height: 3.1rem;
+    font-weight: bold;
+    font-style: italic;
+    color: white;
+    text-justify: center;
 }
 
-#carrossel-1 #cards{
-    display:flex;
+#cards{
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
     margin-top: 30px;
-
     gap: 20px;
 }
 
@@ -316,7 +331,7 @@ section:nth-child(4){
     display: flex;
     flex-direction: row;
     justify-content: center;
-
+    flex-wrap: wrap;
     gap: 92px;
 }
 
@@ -355,21 +370,18 @@ margin-inline: 32px;
 
 #departamentos .estrutura-departamentos{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
-    gap: 30px;
+    gap: 20px;
 }
 
 #departamentos .card-departamento{
     background-color: rgb(255, 255, 255);
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-
     height: 242px;
     width: 290px;
 }
@@ -515,8 +527,21 @@ footer .card:nth-child(5) p{
     .estrutura-newsletter {
         display: none;
     }
+    #carrossel-1 .card-produto:hover{
+        transform: scale(1);
+    }
+    #departamentos .card-departamento:hover{
+        transform: scale(1);
+    }
+   
 }
 @media (max-width: 900px) {
+    .banner {
+        display: none;
+    }
+    .background-image-mobile.ativo {
+        display: block;
+    }
     .header-down a{
         font-size: .8rem;
     }
@@ -532,11 +557,14 @@ footer .card:nth-child(5) p{
     .all-categories {
         margin-left: 20px;
     }
+    section:nth-child(4){
+        margin-top: 0px;
+    }
     footer {
         flex-wrap: wrap;
         justify-content: flex-start;
     }
-}
+}   
 @media (max-width: 700px) {
     .search {
         display: none;
@@ -568,10 +596,38 @@ footer .card:nth-child(5) p{
     }
     .menuhamburguer {
         display: flex !important;
-    }    
+    }
+    section:nth-child(4) {
+        margin-top: 0px;
+    }   
+    section:nth-child(5) {
+        margin-bottom: 50px;
+    } 
+    #mini-banner {
+        display: none;
+    }   
+    #carrossel-1 h2 {
+        margin: 15px 0px;
+    }
+    #departamentos h2 {
+        margin: 15px 0px !important;
+    }
+    .card-departamento:nth-child(1){
+        margin-top: 15px;
+    }
+    section:nth-child(6){
+        margin-top: 0px;
+    }
 }
 @media (max-width: 550px) {
     .categories{
+        display: none;     
+    }
+    .background-image-mobile.ativo {
         display: none;
-}
+    }
+    body{
+        width: 100%;
+        box-sizing: border-box;
+    }
 }
