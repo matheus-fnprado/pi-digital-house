@@ -313,9 +313,9 @@ header{
 
 /* CARROSSEL 2 */
 
-section:nth-child(4){
+/* section:nth-child(4){
     margin-top: 113px;
-}
+} */
 
 /* MINI BANNER */
 
@@ -402,13 +402,13 @@ margin-inline: 32px;
 
 section:nth-child(6){
     margin-top: 113px;
+
+    margin-bottom: 90px;
 }
 
 /* NEWSLETTER */
 
-.estrutura-newsletter{
-    margin-top: 90px;
-
+#newsletter .estrutura-newsletter{
     height: 102px;
     
     display: flex;

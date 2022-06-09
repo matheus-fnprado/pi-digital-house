@@ -9,7 +9,7 @@
 
 main {
     text-align: justify;
-
+    background-color: rgb(243, 249, 242);
 }
 
 .title{
@@ -37,13 +37,20 @@ main {
     margin-top: 10px;
 }
 
-.politica {
+#politics-div {
+    background-color: rgb(255, 255, 255);
+    margin-inline: 88px;
+    padding: 88px;
+}
+
+.politica{
     text-align: center;
     font-size: 100px;
     color: #02494D;
-    margin: 88px;
-    padding: 88px;
+
     text-decoration: none;
+<<<<<<< HEAD
+=======
     background-color: rgb(255, 255, 255);
 
 
@@ -72,4 +79,5 @@ main {
         padding: 50px;
         margin: 88px;
         background-color: white;
+>>>>>>> 74fe34bdc06e06b61bca9d78a5bc33f3324457fb
 }
