@@ -48,6 +48,9 @@ header{
 .logo:hover{
     transform: scale(1.1);
 }
+.logomarca {
+    max-height: 100px;
+}
 .busca form{
     display: flex;
     align-items: center;
@@ -525,7 +528,7 @@ footer .card:nth-child(5) p{
 
 @media (max-width: 1000px) {
     .estrutura-newsletter {
-        display: none;
+        display: none !important;
     }
     #carrossel-1 .card-produto:hover{
         transform: scale(1);
@@ -577,6 +580,9 @@ footer .card:nth-child(5) p{
     }
     .categories{
         margin: 0px;
+    }
+    .categories a{
+        font-size: .9rem;
     }
     header {
         height: 90px !important;
