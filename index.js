@@ -1,9 +1,9 @@
 const express = require("express");
-const methodOverride = require('method-override');
+const methodOverride = require("method-override");
 const app = express();
 const homeRouter = require("./src/routes/homeRouter");
-const loginRouter = require("./src/routes/loginRouter");
 const produtosRouter = require("./src/routes/produtosRouter");
+const loginRouter = require("./src/routes/loginRouter");
 const path = require("path");
 const port = 3000;
 
@@ -15,11 +15,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json()); // responsavel pela conversão do inputs para json ou js
 
 app.use(homeRouter);
-app.use(loginRouter);
 app.use(produtosRouter);
+app.use(loginRouter);
 
 app.use((req, res, next) => {
-    return res.status(404).render('home/error404.ejs', { title: 'Error 404' });
-})
+  return res.status(404).render("home/error404.ejs", { title: "Error 404" });
+});
 
 app.listen(port, () => console.log("Servidor rodando na porta:" + port));

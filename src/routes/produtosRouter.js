@@ -8,13 +8,13 @@ const multer = require("multer");
 router.get("/adm/produtos", produtoController.index);
 
 //Mostra a página para cadastrar um novo produto
-router.get("/adm/produtos/cadastroProduto", produtoController.create);
+router.get("/adm/produtos/cadastroproduto", produtoController.create);
 
 //Mostra a página de detalhes de um Produto
 router.get("/adm/produtos/:id", produtoController.show);
 
 //Mostra a página para atualizar dados de um produto
-router.get("/adm/produtos/:id/editarProduto", produtoController.edit);
+router.get("/adm/produtos/:id/editarproduto", produtoController.edit);
 
 //Envia as informações da página do produto para salvar no banco de dados
 router.post("/adm/produtos", produtoController.store);
