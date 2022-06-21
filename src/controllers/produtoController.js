@@ -5,7 +5,7 @@ const produtoController = {
   index: (req, res) => {
     const produtos = Produto.findAll();
     console.log(produtos);
-    return res.render("/produtos/index", { title: "Produtos" }, { produtos });
+    return res.render("adm/produtos/index", { title: "Produtos", produtos });
   },
 
   //Mostrar a página para cadastar um produto
@@ -36,11 +36,10 @@ const produtoController = {
     if (!produtos) {
       return res.send("Produto não encontrado");
     }
-    return res.render(
-      "adm/produtos/detalhesProduto",
-      { title: "Detalhes do produto" },
-      { produto }
-    );
+    return res.render("adm/produtos/detalhesProduto", {
+      title: "Detalhes do produto",
+      produtos,
+    });
   },
 
   //Exibe a página para editar os dados do produto
@@ -50,7 +49,10 @@ const produtoController = {
     if (!produtos) {
       return res.send("Produto não encontrado");
     }
-    return res.render("adm/produtos/editarProduto", { produto });
+    return res.render("adm/produtos/editarProduto", {
+      produtos,
+      title: "Editar produto",
+    });
   },
 
   //Atualiza os dados do produto no banco de dados
