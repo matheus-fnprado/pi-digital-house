@@ -4,8 +4,8 @@
             "id": "1",
             "nome": "Headset Gamer HyperX Cloud Core para PC",
             "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat.",
-            "imagem": "https://images.kabum.com.br/produtos/fotos/115318/headset-gamer-hyperx-cloud-core-7-1-virtual-surround-drivers-53mm-hx-hscc-2-bk-ww_1595258447_gg.jpg",
-            "preco": "1000.00",
+            "imagem": "",
+            "preco": "3000.00",
             "ativo": true
         },
         {
@@ -23,6 +23,14 @@
             "imagem": "https://m.media-amazon.com/images/I/81++s7AGryL._AC_SL1500_.jpg",
             "preco": "59.99",
             "ativo": true
+        },
+        {
+            "nome": "RTX 3060",
+            "descricao": "Placa de Video RTX 3060",
+            "imagem": "placa-de-video-zotac-nvidia-geforce-rtx-3060ti-twin-edge-lhr-8gb-14-0-gbps-gddr6-dlss-ray-tracing-zt-a30610e-10mlhr_1623326525_original.jpeg",
+            "preco": "4000",
+            "ativo": true,
+            "id": "137a3933-714c-4ccb-a9cf-d04e5f42bc7d"
         }
     ]
 }

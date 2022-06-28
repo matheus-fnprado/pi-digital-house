@@ -14,7 +14,7 @@ router.get("/adm/produtos/cadastroproduto", produtoController.create);
 router.get("/adm/produtos/:id", produtoController.show);
 
 //Mostra a página para atualizar dados de um produto
-router.get("/adm/produtos/:id/editarproduto", produtoController.edit);
+router.get("/adm/produtos/:id/editar", produtoController.edit);
 
 //Envia as informações da página do produto para salvar no banco de dados
 router.post("/adm/produtos", produtoController.store);
