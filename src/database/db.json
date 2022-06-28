@@ -14,6 +14,14 @@
             "imagem": "https://m.media-amazon.com/images/I/81++s7AGryL._AC_SL1500_.jpg",
             "preco": "59.99",
             "ativo": true
+        },
+        {
+            "nome": "RTX 3060",
+            "descricao": "Placa de Video RTX 3060",
+            "imagem": "placa-de-video-zotac-nvidia-geforce-rtx-3060ti-twin-edge-lhr-8gb-14-0-gbps-gddr6-dlss-ray-tracing-zt-a30610e-10mlhr_1623326525_original.jpeg",
+            "preco": "4000",
+            "ativo": true,
+            "id": "137a3933-714c-4ccb-a9cf-d04e5f42bc7d"
         }
     ]
 }
