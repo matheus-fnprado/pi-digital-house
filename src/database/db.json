@@ -1,14 +1,5 @@
 {
-    "produtos": [
-        {
-            "id": "1",
-            "nome": "Headset Gamer HyperX Cloud Core para PC",
-            "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat.",
-            "imagem": "https://images.kabum.com.br/produtos/fotos/115318/headset-gamer-hyperx-cloud-core-7-1-virtual-surround-drivers-53mm-hx-hscc-2-bk-ww_1595258447_gg.jpg",
-            "preco": "1000.00",
-            "ativo": true
-        },
-        {
+    "produtos": [{
             "id": "2",
             "nome": "Mouse Hyperx Pulsefire FPS Gaming",
             "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat.",
