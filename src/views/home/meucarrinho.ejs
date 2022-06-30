@@ -25,7 +25,7 @@
                     <p>Rua XXXXX, Número XXX</p>
                     <p>Bairro XXXXX, Cidade XXXXX,XX</p>
                     <p>CEP XXXXX-XXX, Complemento XXXX</p>
-                    <button>Alterar</button>
+                    <button data-modal="abrir">Alterar</button>
                 </div>
             </div>
 
@@ -136,6 +136,21 @@
 
         </section>
 
+        <section class="modal-container" data-modal="container">
+            <div class="modal">
+                <h2>ALTERAR ENDEREÇO</h2>
+                <button data-modal="fechar" class="fechar">X</button>
+                <div class="content-modal">
+                    <input type="text" placeholder="Rua + Número">
+                    <input type="text" placeholder="Bairro">
+                    <input type="text" placeholder="Cidade">
+                    <input type="text" placeholder="CEP">
+                    <input type="text" placeholder="Complemento">
+                    <button type="button" id="alterar-endereco">Alterar</button>
+                </div>
+            </div>
+        </section>
+
         <section id="mini-banner">
 
             <div class="banners-org">
@@ -164,6 +179,7 @@
         </section>
 
         <%- include('../partials/footer') %>
+        <script type="text/javascript" src="/js/meusdados.js" defer></script>
 
 </body>
 

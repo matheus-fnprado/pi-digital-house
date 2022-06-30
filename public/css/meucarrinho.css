@@ -1,4 +1,15 @@
+/* GLOBAL */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --c-azul-1: rgb(2, 73, 77);
+    --c-verde-1: rgb(147, 254, 2);
+    --c-verde-2: #d6ff9c;
+    --c-preto-1: rgb(0, 0, 0);
+    --c-backg-1: #f3f9f2;
+    --c-verde-3: #42ff917a;
+}
 
 *{
     padding: 0px;
@@ -11,8 +22,6 @@ main{
     background-color: #f3f9f2;
 }
 
-/* GLOBAL */
-
 h1{
     font-size: 32px;
 }
@@ -22,114 +31,16 @@ h2{
     padding-left: 16px;
 }
 
-/* HEADER */
-
-header {
-    background-color: rgb(2, 73, 77);
-    color: rgb(255, 255, 255);
-
-    width: 100%;
-    height: 144px;
-
-    border: 1px solid rgb(0, 0, 0);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-
-header .busca #search{
-    width: 303px;
-    height: 43px;
-
-    border: none;
-    border-radius: 20px;
-
-    text-align: center;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-header .login{
-    display: flex;
-    align-items: center;
-
-    gap: 12px;
-}
-
-header .login a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 12px;
-}
-
-header .login a span{
-    font-weight: bold;
-}
-
-header .navigation nav{
-    display: flex;
-
-    gap: 30px;
-}
-
-header .navigation nav.navigation-img{
-    height: 33px;
-    width: 36px;
-}
-
-/* CATEGORIAS */
-
-.header-down {
-    background-color: rgb(147, 254, 2);
-    width: 100%;
-    height: 63px;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-.header-down nav.all-categories{
-    padding-left: 36px;
-}
-.header-down nav.all-categories a{
-    font-size: 14px;
-    color: #000;
-    font-weight: bold;
-
-    text-decoration: none;
-    text-transform: uppercase;
-}
-.header-down nav.categories{
-    display: flex;
-
-    align-items: center;
-    gap: 93px;
-
-    padding-right: 221px;
-}
-.header-down nav.categories a{
-    font-size: 14px;
-    color: #000;
-    font-weight: bold;
-
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-/* MAIN */
-
 /* GERAIS PÁGINA */
 
 .titulo{
     display: flex;
-    background: #d6ff9c;
+    background-color: #02494d;
+    background-image: linear-gradient(90deg, #95fe02 30%, #02494d 100%);
     padding: 30px 80px;
     align-items: center;
     margin-bottom: 50px;
+    margin-top: 10px;
 }
 .titulo img{
     max-width: 50px;
@@ -178,6 +89,9 @@ header .navigation nav.navigation-img{
 .resumoenderecoentrega{
     grid-column: 1;
     grid-row: 1;
+    box-shadow: 2px 2px 3px rgb(187, 187, 187);
+    border-radius: 20px;
+    padding: 30px;
 }
     .ree-dados{
         display: grid;
@@ -220,6 +134,9 @@ header .navigation nav.navigation-img{
 .resumovalor{
     grid-column: 2;
     grid-row: 1;
+    box-shadow: 2px 2px 3px rgb(187, 187, 187);
+    border-radius: 20px;
+    padding: 30px;
 }
 
 /* ITEM 03 */
@@ -227,6 +144,9 @@ header .navigation nav.navigation-img{
 .resumoprodutoenvio{
     grid-column: 1;
     grid-row: 2;
+    box-shadow: 2px 2px 3px rgb(187, 187, 187);
+    border-radius: 20px;
+    padding: 30px;
 }
 .produtoficticio{
     display: flex;
@@ -294,18 +214,23 @@ header .navigation nav.navigation-img{
     grid-column: 2;
     grid-row: 2;
     margin-top: 10px;
-    color:rgb(2, 73, 77);
+    color:rgb(255, 255, 255);
+    background:rgb(2, 73, 77);
     font-weight: bold;
     display: grid;
+    box-shadow: 2px 2px 3px rgb(187, 187, 187);
+    border-radius: 20px;
+    padding: 30px;
 }
 .pagamentopix button{
     margin-top: 10px;
     border: none;
     width: 50%;
     height: 50px;
-    color:rgb(147, 254, 2);
+    color:rgb(2, 73, 77);
+    font-weight: bold;
     border-radius: 5px;
-    background-color: #02494D;
+    background-color: #93FE02;
     font-size: 16px;
     justify-self: center;
     cursor: pointer;    
@@ -318,7 +243,7 @@ header .navigation nav.navigation-img{
     color:#02494D;
     font-weight: bold;
     border: 4px solid #02494D;
-    border-radius: 5px;
+    border-radius: 7px;
     background-color: #ffffff;
     font-size: 16px;
 }
@@ -326,11 +251,17 @@ header .navigation nav.navigation-img{
 .pagamentopix p{
     text-align: right
 }
+.pagamentopix span{
+    text-decoration: line-through;
+}
 /* ITEM 05 */
 
 .escolhatipoenvio{
     grid-column: 1;
     grid-row: 3;
+    box-shadow: 2px 2px 3px rgb(187, 187, 187);
+    border-radius: 20px;
+    padding: 30px;
 }
 .ete-escolhafretes{
     margin-top: 50px;
@@ -356,10 +287,15 @@ header .navigation nav.navigation-img{
     grid-column: 1;
     grid-row: 4;
     margin-top: 50px;
+    box-shadow: 2px 2px 3px rgb(187, 187, 187);
+    border-radius: 20px;
+    padding: 30px;
+    justify-content: center;
 }
 
 .cupomdesconto input{
-    width: 353px;
+    width: 100%;
+    max-width: 500px;
     height: 42px;
     border: 2px solid #000000;
     border-radius: 10px;
@@ -379,189 +315,143 @@ header .navigation nav.navigation-img{
     border-radius: 5px;
     cursor: pointer;
 }
-
-/* MINI BANNER */
-
-#mini-banner{
-    margin-top: 131px;
-}
-
-#mini-banner .estrutura-cards{
-    height: 166px;
-}
-
-#mini-banner .banners-org{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
-    gap: 92px;
-}
-
-#mini-banner .card-mini-banner{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    width: 488px;
-
-    background-color: rgb(2, 73, 77);
-    color:rgb(147, 254, 2)
-}
-
-#mini-banner p{
-margin-inline: 32px;
-}
-
-#mini-banner p:nth-child(1){
-    color:rgb(255, 255, 255)
-}
-
-#mini-banner p:nth-child(2){
-    margin-top: 13px;
-}
-
-#mini-bannerimg{
-    height: auto;
-}
-
-/* DEPARTAMENTOS */
-
-#departamentos .estrutura-departamentos{
+.cupomdesconto div{
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-
-    gap: 30px;
 }
 
-#departamentos .card-departamento{
-    background-color: rgb(255, 255, 255);
+/* MODAL ESQUECI MINHA SENHA */
 
+.modal-container{
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.modal-container.ativo{
+    display: flex;
+}
+.modal{
+    background: white;
+    min-width: 300px;
+    padding: 40px;
+    min-height: 150px;
+    box-shadow: 0 0 0px 10px white;
+    position: relative;
+    border-radius: 10px;
+}
+.modal h2{
+    padding: 0px;
+}
+@keyframes modal{
+    from {
+        opacity: 0;
+        transform: translate3d(0, -30px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+.ativo .modal{
+    animation: modal .3s forwards;
+}
+.fechar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid white;
+    top: -30px;
+    right: -30px;
+    position: absolute;
+    background: var(--c-azul-1);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .3);
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+}
+.modal button[type="button"]{
+    background: var(--c-azul-1);
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    padding: .7rem 2rem;
+    font-size: 1rem;
+    color: white;
+    margin-top: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.content-modal input{
+    display: block;
+    margin: 5px 0px;
+    height: 41px;
+    width: 250px;
+    border: 2px solid var(--c-azul-1);
+    border-radius: 5px;
+}
+.content-modal {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-
-
-    height: 242px;
-    width: 290px;
+}
+.modal input:nth-child(1){
+    margin-top: 20px;
+}
+.content-modal input::-webkit-input-placeholder{
+    font-size: 1rem;
 }
 
-#departamentos div h2{
-    margin-block: 91px;
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1300px) {
+    #mini-banner {
+        display: none;
+    }
+    #newsletter {
+        display: none;
+    }
 }
-
-#departamentos div p{
-    margin-bottom: 10px;
-}
-
-/* CARROSSEL 3 */
-
-section:nth-child(6){
-    margin-top: 113px;
-}
-
-/* NEWSLETTER */
-
-#newsletter .estrutura-newsletter{
-    margin-top: 90px;
-
-    height: 102px;
+@media (max-width: 900px) {  
+}   
+@media (max-width: 700px) {
+    .resumopedido {
+        grid-template-columns: minmax(300px, 500px);
+    }
+    .resumovalor {
+        grid-column: 1;
+        grid-row: 4;
+    }
+    .resumoprodutoenvio {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .pagamentopix {
+        grid-column: 1;
+        grid-row: 5;
+    }
+    .escolhatipoenvio {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .cupomdesconto {
+        grid-column: 1;
+        grid-row: 6;
+        margin-top: 0px;
+        margin-bottom: 30px;
+    }
     
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
 
-    background-color: #93FE02;
 }
-
-#newsletter .estrutura-newsletter h3{
-    margin-bottom: 5px;
-    font-size: 14px;
-}
-
-#newsletter .estrutura-newsletter p{
-    font-size: 12px;
-}
-
-#newsletter .estrutura-newsletter #name,
-#newsletter .estrutura-newsletter #e-mail{
-    width: 253px;
-    height: 42px;
-
-    border: none;
-    border-radius: 10px;
-
-    text-align: center;
-    font-weight: bold;
-}
-
-#newsletter .estrutura-newsletter button{
-    width: 207px;
-    height: 42px;
-
-    background-color: rgb(2, 73, 77);
-    color: rgb(255, 255, 255);
-
-    border: none;
-    border-radius: 10px;
-
-    text-align: center;
-    font-weight: bold;
-}
-
-#newsletter .estrutura-newsletter button:hover{
-    background-color: rgb(11, 120, 126);
-}
-
-/* RODAPE */
-
-footer{
-    width: 100%;
-    height: auto;
-
-    display:flex;
-    justify-content: space-around;
-    align-items:flex-start;
-    gap: 58px;
-
-    padding-top: 60px;
-    padding-left: 36px;
-    padding-right: 65px;
-
-    background-color: rgb(2, 73, 77);
-}
-
-footer ul li{
-    list-style: none;
-    margin-block: 3px;
-}
-
-footer h3{
-    color: #fff;
-
-    font-size:18px;
-
-    margin-bottom: 17px;
-}
-
-footer a,
-footer p{
-    color:#fff;
-
-    font-size: 15px;
-    text-decoration: none;
-}
-
-footer a{
-    margin-bottom: 9px;;
-}
-
-footer .card:nth-child(3) div:nth-child(2) {
-    padding-top: 24px;
-}
-
-footer .card:nth-child(5) p{
-    margin-block: 25px;
+@media (max-width: 550px) {
 }

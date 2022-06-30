@@ -460,7 +460,7 @@ a{
     display: flex;
 }
 .modal{
-    background: var(--c-verde-2);
+    background: white;
     min-width: 300px;
     padding: 40px;
     min-height: 350px;

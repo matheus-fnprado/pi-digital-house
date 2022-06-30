@@ -367,7 +367,7 @@ header{
 }
 
 #mini-banner p{
-margin-inline: 32px;
+    margin-inline: 32px;
 }
 
 #mini-banner p:nth-child(1){
@@ -444,14 +444,14 @@ section:nth-child(6){
 }
 
 .estrutura-newsletter #name,
-.estrutura-newsletter #e-mail{
+.estrutura-newsletter #email{
     width: 253px;
     height: 42px;
 
     border: none;
     border-radius: 10px;
 
-    text-align: center;
+    /* text-align: center; */
     font-weight: bold;
 }
 
@@ -471,6 +471,18 @@ section:nth-child(6){
 
 .estrutura-newsletter button:hover{
     background-color: rgb(11, 120, 126);
+}
+#newsletter-form {
+    position: relative;
+}
+.erro{
+    color: red;
+    position: absolute; 
+    top: 45px;
+    right: 13px;
+}
+.invalido {
+    border-color: red;
 }
 
 /* RODAPE */

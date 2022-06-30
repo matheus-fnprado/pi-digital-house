@@ -43,7 +43,7 @@
                     <div>
                         <label for="senha">Confirme sua senha*</label>
                         <br>
-                        <input type="password" id="senha" name="senha" placeholder="6 dígitos ou mais">
+                        <input type="password" id="senha-confirma" name="senha" placeholder="6 dígitos ou mais">
                         <img src="/img/iconecadeado.svg" alt="Ícone cadeado">
                     </div>
                     <div>
@@ -104,9 +104,20 @@
                         <button type="submit"><img src="/img/iconeentrarverde.svg" alt="">Entrar</button>
                     </div>
                     <div class="botoesend01">
-                        <button>Esqueci meu Login</button>
-                        <button>Esqueci minha Senha</button>
+                        <!-- <button >Esqueci meus Login</button> -->
+                        <button data-modal="abrir">Esqueci minha Senha</button>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="modal-container" data-modal="container">
+            <div class="modal">
+                <h2>ESQUECI MEUS DADOS DE ACESSO</h2>
+                <button data-modal="fechar" class="fechar">X</button>
+                <div class="content-modal">
+                    <input type="email" placeholder="Digite seu e-mail ou CPF">
+                    <button type="button" id="enviar">Enviar</button>
                 </div>
             </div>
         </section>
@@ -137,6 +148,7 @@
     </main>
 
     <%- include('../partials/footer') %>
+    <script type="text/javascript" src="/js/meusdados.js" defer></script>
 
 </body>
 
