@@ -1,11 +1,11 @@
 const express = require("express");
 const methodOverride = require("method-override");
 const app = express();
+const path = require("path");
 const homeRouter = require("./src/routes/homeRouter");
 const produtosRouter = require("./src/routes/produtosRouter");
 const authRouter = require("./src/routes/authRouter");
 const session = require("express-session");
-const path = require("path");
 const port = 3000;
 
 app.use(methodOverride("_method"));
