@@ -1,14 +1,5 @@
 {
-    "produtos": [
-        {
-            "id": "1",
-            "nome": "Headset Gamer HyperX Cloud Core para PC",
-            "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat.",
-            "imagem": "",
-            "preco": "3000.00",
-            "ativo": true
-        },
-        {
+    "produtos": [{
             "id": "2",
             "nome": "Mouse Hyperx Pulsefire FPS Gaming",
             "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat.",
