@@ -3,7 +3,8 @@ const methodOverride = require("method-override");
 const app = express();
 const homeRouter = require("./src/routes/homeRouter");
 const produtosRouter = require("./src/routes/produtosRouter");
-const loginRouter = require("./src/routes/loginRouter");
+const authRouter = require("./src/routes/authRouter");
+const session = require("express-session");
 const path = require("path");
 const port = 3000;
 
@@ -14,12 +15,22 @@ app.set("views", "src/views");
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json()); // responsavel pela conversão do inputs para json ou js
 
+app.use(
+  session({
+    secret: "meu primeiro ecommerce",
+    resave: false,
+    saveUninitialized: true,
+  })
+);
+
 app.use(homeRouter);
+app.use(authRouter);
 app.use(produtosRouter);
-app.use(loginRouter);
 
 app.use((req, res, next) => {
-  return res.status(404).render("home/error404.ejs", { title: "Error 404" });
+  return res
+    .status(404)
+    .render("home/error404.ejs", { title: "Pagina nao encontrada" });
 });
 
 app.listen(port, () => console.log("Servidor rodando na porta:" + port));

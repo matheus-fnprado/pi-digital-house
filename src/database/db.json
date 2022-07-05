@@ -32,5 +32,21 @@
             "ativo": true,
             "id": "137a3933-714c-4ccb-a9cf-d04e5f42bc7d"
         }
+    ],
+    "usuarios": [
+        {
+            "id": "1",
+            "nome": "admin",
+            "email": "admin@mail.com",
+            "senha": "1345",
+            "logado:": false
+        },
+        {
+            "id": "2",
+            "nome": "Bernardo",
+            "email": "bedoval1@hotmail.com",
+            "senha": "1345",
+            "logado": false
+        }
     ]
 }
