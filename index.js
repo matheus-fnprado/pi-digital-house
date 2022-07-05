@@ -25,7 +25,7 @@ app.use(
 
 app.use(homeRouter);
 app.use(authRouter);
-app.use(produtosRouter);
+app.use("adm/produtos", produtosRouter);
 
 app.use((req, res, next) => {
   return res
