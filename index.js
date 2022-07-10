@@ -5,6 +5,7 @@ const path = require("path");
 const homeRouter = require("./src/routes/homeRouter");
 const produtosRouter = require("./src/routes/produtosRouter");
 const authRouter = require("./src/routes/authRouter");
+const carrinhoRouter = require("./src/routes/carrinhoRouter");
 // const session = require("express-session");
 const port = 3000;
 
@@ -25,7 +26,8 @@ app.use(express.json()); // responsavel pela conversão do inputs para json ou j
 
 app.use(homeRouter);
 app.use(authRouter);
-app.use("adm/produtos", produtosRouter);
+app.use(carrinhoRouter);
+app.use(produtosRouter);
 
 app.use((req, res, next) => {
   return res

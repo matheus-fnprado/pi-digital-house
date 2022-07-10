@@ -3,7 +3,12 @@ const router = express.Router();
 const produtoController = require("../controllers/produtoController");
 const path = require("path");
 const multer = require("multer");
+const isLogin = require("../middlewares/isLogin");
+const isAdmin = require("../middlewares/isAdmin");
 
+
+router.use(isLogin);
+router.use(isAdmin);
 //Mostra a página inicial dos produtos
 router.get("/adm/produtos", produtoController.index);
 

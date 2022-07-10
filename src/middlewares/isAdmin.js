@@ -3,7 +3,7 @@ const isAdmin = (req, res, next) => {
   if (usuario.tipoUsuario == "admin") {
     return next();
   }
-  return res.redirect("/");
+  return res.redirect("/home");
 };
 
 module.exports = isAdmin;

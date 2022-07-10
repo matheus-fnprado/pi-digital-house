@@ -1,7 +1,12 @@
 const express = require("express");
 const router = express.Router();
 const homeController = require("../controllers/homeController");
+const isLogin = require("../middlewares/isLogin");
+const isAdmin = require("../middlewares/isAdmin");
 
+
+router.use(isLogin);
+router.use(isAdmin);
 router.get("/favoritos", homeController.favoritos);
 router.get("/", homeController.index);
 router.get("/home", homeController.index);
