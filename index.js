@@ -5,7 +5,7 @@ const path = require("path");
 const homeRouter = require("./src/routes/homeRouter");
 const produtosRouter = require("./src/routes/produtosRouter");
 const authRouter = require("./src/routes/authRouter");
-const session = require("express-session");
+// const session = require("express-session");
 const port = 3000;
 
 app.use(methodOverride("_method"));
@@ -15,13 +15,13 @@ app.set("views", "src/views");
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json()); // responsavel pela conversão do inputs para json ou js
 
-app.use(
-  session({
-    secret: "meu primeiro ecommerce",
-    resave: false,
-    saveUninitialized: true,
-  })
-);
+// app.use(
+//   session({
+//     secret: "meu primeiro ecommerce",
+//     resave: false,
+//     saveUninitialized: true,
+//   })
+// );
 
 app.use(homeRouter);
 app.use(authRouter);
