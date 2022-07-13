@@ -35,6 +35,9 @@ const homeController = {
   termos: (req, res) => {
     res.render("home/termos", { title: "Termos de uso" });
   },
+  categorias: (req, res) => {
+    res.render("home/categorias", { title: "Navegue por categoria" });
+  }
 };
 
 module.exports = homeController;

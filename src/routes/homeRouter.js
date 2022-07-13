@@ -15,5 +15,6 @@ router.get("/quemsomos", homeController.quemsomos);
 router.get("/segmentos", homeController.segmentos);
 router.get("/suporte", homeController.suporte);
 router.get("/termos", homeController.termos);
+router.get("/categorias", homeController.categorias);
 
 module.exports = router;
