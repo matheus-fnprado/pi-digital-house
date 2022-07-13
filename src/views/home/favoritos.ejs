@@ -1,12 +1,66 @@
 <!DOCTYPE html>
 <%- include('../partials/head') %>
+<link rel="stylesheet" href="/css/favoritos.css">
 
 <body>
 
     <%- include('../partials/header') %>
 
     <main>
-        <h1>MEUS FAVORITOS</h1>
+        <div class="org-favs">
+            <div class="favs-icon">
+                <img src="">
+                <img src="">
+                <img src="">
+                <img src="">
+                <img src="">
+                <img src="">
+                <img src="">
+            </div>
+
+            <div>
+                <div class="title-favs">
+                    <img class="img-favs" src="/img/coracao.svg">
+                    <h1>FAVORITOS</h1>
+                </div>
+
+                <div class="favs">
+                    <div>
+                        <p>Você não favoritou nenhum produto</p>
+                    </div>
+
+                    <div>
+                        <a href="/home">
+                            <button>Voltar para home</button>
+                        </a>
+                    </div>
+                </div>
+
+                <section id="mini-banner">
+                    <div class="banners-org">
+                        <div class="estrutura-cards">
+                            <div class="card-mini-banner">
+                                <div>
+                                    <p>OFERTA ESPECIAL DE CONSOLE PS5</p>
+                                    <p>34% OFF</p>
+                                </div>
+                                <img src="/img/mini-1.png">
+                            </div>
+                        </div>
+                        <div class="estrutura-cards">
+                            <div class="card-mini-banner">
+                                <div>
+                                    <p>MONITOR GAMER COM</p>
+                                    <p>40% OFF</p>
+                                </div>
+                                <img src="/img/mini-2.png">
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+        </div>
     </main>
 
     <%- include('../partials/footer') %>

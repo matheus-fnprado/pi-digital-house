@@ -5,19 +5,18 @@
             <p>Receba ofertas exclusivas<br> no seu e-mail</p>
         </div>
         <div>
-            <form>
+            <form id="newsletter-form">
                 <label for="name"></label>
                 <input type="text" id="name" name="name" placeholder="Digite seu nome">
-            </form>
-        </div>
-        <div>
-            <form>
+                <span class="erro"></span>
                 <label for="e-mail"></label>
-                <input type="e-mail" id="e-mail" name="e-mail" placeholder="Digite seu melhor e-mail">
+                <input type="email" id="email" name="email" placeholder="Digite seu melhor e-mail" required>
+                <span class="erro"></span>
             </form>
         </div>
         <button type="submit">CADASTRAR</button>
     </div>
+<script type="text/javascript" src="/js/footer.js" defer></script>
 </section>
 
 <footer>
@@ -55,6 +54,7 @@
         <h3>Minha Conta</h3>
         <ul>
             <li><a href="/perfil">Meus Pedidos</a></li>
+            <li><a href="/carrinho">Meu Carrinho</a></li>
         </ul>
     </div>
 
@@ -77,3 +77,4 @@
         </div>
     </div>
 </footer>
+
