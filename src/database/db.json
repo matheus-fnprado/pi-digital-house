@@ -29,14 +29,15 @@
             "id": "1",
             "nome": "admin",
             "email": "admin@mail.com",
-            "senha": "1345",
-            "logado:": false
+            "senha": "$2a$10$Rt2S0XGzhimd/2eO9k3S4u16N6mgyEuCGzelUOzxlREt/abAJ2Qke",
+            "logado:": false,
+            "tipoUsuario": "admin"
         },
         {
             "id": "2",
             "nome": "Bernardo",
             "email": "bedoval1@hotmail.com",
-            "senha": "1345",
+            "senha": "$2a$10$Rt2S0XGzhimd/2eO9k3S4u16N6mgyEuCGzelUOzxlREt/abAJ2Qke",
             "logado": false
         }
     ]

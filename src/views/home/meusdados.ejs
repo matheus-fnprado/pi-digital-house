@@ -89,25 +89,28 @@
                     <img src="/img/iconejacadastro.svg" alt="Ícone login">
                     <h2>Já tenho Cadastro</h2>
                 </div>
-                <div class="ed-principal">
-                    <div>
-                        <label for="login">E-mail ou CPF*</label>
-                        <br>
-                        <input type="text" id="login" name="login" placeholder="E-mail ou CPF">
+                <form action="/login" method="POST">
+                    <div class="ed-principal">
+                        <div>
+                            <label for="login">E-mail</label>
+                            <br>
+                            <input type="email" id="login" name="emailLogin" placeholder="E-mail">
+                        </div>
+                        <div>
+                            <label for="senhalogin">Senha*</label>
+                            <br>
+                            <input type="password" id="senhalogin" name="senhalogin" placeholder="Senha">
+                        </div>
+                        <div class="botaologin">
+                            <button type="submit"><img src="/img/iconeentrarverde.svg" alt="">Entrar</button>
+
+                        </div>
+                        <div class="botoesend01">
+                            <!-- <button >Esqueci meus Login</button> -->
+                            <button data-modal="abrir">Esqueci minha Senha</button>
+                        </div>
                     </div>
-                    <div>
-                        <label for="senhalogin">Senha*</label>
-                        <br>
-                        <input type="password" id="senhalogin" name="senhalogin" placeholder="Senha">
-                    </div>
-                    <div class="botaologin">
-                        <button type="submit"><img src="/img/iconeentrarverde.svg" alt="">Entrar</button>
-                    </div>
-                    <div class="botoesend01">
-                        <!-- <button >Esqueci meus Login</button> -->
-                        <button data-modal="abrir">Esqueci minha Senha</button>
-                    </div>
-                </div>
+                </form>
             </div>
         </section>
 

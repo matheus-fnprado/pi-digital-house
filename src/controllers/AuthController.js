@@ -2,13 +2,6 @@ const bcrypt = require("bcryptjs");
 const Usuario = require("../models/Usuario");
 
 const AuthController = {
-  showLogin: (rew, res) => {
-    return res.render("home/meusdados", { title: "Login" });
-  },
-
-  showCadastrar: (req, res) => {
-    return res.render("home/meusdados", { title: "Cadastro" });
-  },
 
   store: (req, res) => {
     const { nome, email, senha } = req.body;
@@ -29,21 +22,20 @@ const AuthController = {
 
     Usuario.create(usuario);
 
-    return res.redirect("home/perfil");
+    return res.redirect("/perfil");
   },
 
   login: (req, res) => {
-    const { email, senha } = req.body;
-    const usuario = Usuario.findOne(email);
-
-    if (!usuario || !bcrypt.compareSync(senha, usuario.senha)) {
-      return res.render("home/login", {
-        error: "Email ou senha estão incorretos ou não existe.",
+    const { emailLogin, senhalogin } = req.body;
+    const usuario = Usuario.findOne(emailLogin);
+    if (!usuario || !bcrypt.compareSync(senhalogin, usuario.senha)) {
+      return res.render("home/meusdados", {
+        error: "Email ou senha estão incorretos ou não existe.", title: "Meus Dados"
       });
     }
 
     req.session.usuario = usuario;
-    return res.redirect("/");
+    return res.redirect("/perfil");
   },
 
   logout: (req, res) => {
@@ -51,7 +43,7 @@ const AuthController = {
       // cannot access session here
     });
 
-    return res.redirect("home/login");
+    return res.redirect("/home");
   },
 };
 

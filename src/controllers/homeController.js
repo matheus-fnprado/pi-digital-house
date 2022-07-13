@@ -5,9 +5,6 @@ const homeController = {
   index: (req, res) => {
     res.render("home/index", { title: "Pagina Home" });
   },
-  carrinho: (req, res) => {
-    res.render("home/meucarrinho", { title: "Meu Carrinho" });
-  },
   meusdados: (req, res) => {
     res.render("home/meusdados", { title: "Meus Dados" });
   },
