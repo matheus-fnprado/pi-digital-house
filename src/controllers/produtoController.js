@@ -17,11 +17,11 @@ const produtoController = {
 
   //Realiza o cadastro de um novo produto no banco de dados
   store: (req, res) => {
-    const { nome, descricao, imagem, preco, ativo } = req.body;
+    const { nome, descricao, preco, ativo } = req.body;
     const produtos = {
       nome,
       descricao,
-      imagem,
+      imagem: req.file.filename,
       preco,
       ativo: ativo == "on" ? true : false,
     };
