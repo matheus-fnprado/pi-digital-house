@@ -4,9 +4,9 @@ const Usuario = require("../models/Usuario");
 const AuthController = {
 
   store: (req, res) => {
-    const { nome, email, senha } = req.body;
+    const { nomecompleto, emailLogin, cadastropf, senha, cependereco, sexo, datanascimento, telefonecontato } = req.body;
     const hash = bcrypt.hashSync(senha, 10);
-    const verificaSeCadastrado = Usuario.findOne(email);
+    const verificaSeCadastrado = Usuario.findOne(emailLogin);
 
     if (verificaSeCadastrado) {
       return res.render("home/meusdados", {
@@ -15,14 +15,19 @@ const AuthController = {
     }
 
     const usuario = {
-      nome,
-      email,
+      nome: nomecompleto,
+      email: emailLogin,
       senha: hash,
+      cpf: cadastropf,
+      cep: cependereco,
+      sexo: sexo,
+      datanasc: datanascimento,
+      telefone: telefonecontato
     };
 
     Usuario.create(usuario);
-
-    return res.redirect("/perfil");
+    console.log(usuario)
+    return res.redirect("/meusdados");
   },
 
   login: (req, res) => {
