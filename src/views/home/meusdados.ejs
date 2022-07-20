@@ -18,7 +18,7 @@
                     <img src="/img/iconecadastrar.svg" alt="Ícone dados">
                     <h2>Quero me Cadastrar</h2>
                 </div>
-                <form class="db-dados">
+                <form class="db-dados" action="/cadastrar" method="post">
                     <div>
                         <label for="nomecompleto">Nome Completo*</label>
                         <br>
@@ -27,7 +27,7 @@
                     <div>
                         <label for="email-login">E-mail/Login*</label>
                         <br>
-                        <input type="email" id="email-login" name="email-login" placeholder="email@email.com">
+                        <input type="email" id="emailLogin" name="emailLogin" placeholder="email@email.com">
                     </div>
                     <div>
                         <label for="cadastropf">CPF*</label>
@@ -37,7 +37,7 @@
                     <div>
                         <label for="senha">Crie sua senha*</label>
                         <br>
-                        <input type="password" id="senha" name="senha" placeholder="6 dígitos ou mais">
+                        <input type="password" id="senha" name="confirmasenha" placeholder="6 dígitos ou mais">
                         <img src="/img/iconecadeado.svg" alt="Ícone cadeado">
                     </div>
                     <div>
@@ -54,11 +54,11 @@
                     <div>
                         <label for="sexo">Sexo*</label>
                         <br>
-                        <input type="radio" id="masculino" name="sexo">
+                        <input type="radio" id="masculino" name="sexo" value="M">
                         <label for="masculino">Masculino</label>
-                        <input type="radio" id="feminino" name="sexo">
+                        <input type="radio" id="feminino" name="sexo" value="F">
                         <label for="feminino">Feminino</label>
-                        <input type="radio" id="naoresponder" name="sexo">
+                        <input type="radio" id="naoresponder" name="sexo" value="N">
                         <label for="naoresponder">Prefiro não informar</label>
                     </div>
                     <div>

@@ -8,7 +8,7 @@
     <main>
         <section class="servicos-lista">
             <div class="container">
-                <h1>Serviços</h1>
+                <h1>Produtos</h1>
                 <a href="/adm/produtos/cadastroproduto" class="btn btn-primary mb-5">Cadastrar</a>
                 <table class="table table-dark table-striped table-bordered ">
                     <thead>
@@ -27,7 +27,7 @@
                             <th scope="row">
                                 <%= produto.id %>
                             </th>
-                            <td><img class="thumb" src="<%= produto.imagem %>" alt="" width="100px" height="100px"></td>
+                            <td><img class="thumb" src="/img/produtos/<%= produto.imagem %>" alt="" width="100px" height="100px"></td>
                             <td>
                                 <%= produto.nome %>
                             </td>

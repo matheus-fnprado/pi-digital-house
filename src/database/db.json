@@ -1,27 +1,52 @@
 {
-    "produtos": [{
+    "produtos": [
+        {
             "id": "2",
             "nome": "Mouse Hyperx Pulsefire FPS Gaming",
             "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat.",
-            "imagem": "https://images-americanas.b2w.io/produtos/01/00/img/133818/6/133818631_1SZ.jpg",
+            "imagem": "1657840148212-668252355-133818631_1SZ.webp",
             "preco": "159.99",
             "ativo": true
         },
         {
-            "id": 3,
+            "id": "3",
             "nome": "HyperX Gaming Mouse Pad Fury, Tamanho Médio",
             "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat.",
-            "imagem": "https://m.media-amazon.com/images/I/81++s7AGryL._AC_SL1500_.jpg",
+            "imagem": "1657840179803-919648141-81++s7AGryL._AC_SL1500_.jpg",
             "preco": "59.99",
             "ativo": true
         },
         {
             "nome": "RTX 3060",
             "descricao": "Placa de Video RTX 3060",
-            "imagem": "placa-de-video-zotac-nvidia-geforce-rtx-3060ti-twin-edge-lhr-8gb-14-0-gbps-gddr6-dlss-ray-tracing-zt-a30610e-10mlhr_1623326525_original.jpeg",
+            "imagem": "1657839668533-27039830-placa-de-video-asus-nvidia-geforce-rtx-3050-oc-8gb-gddr6-ray-tracing-90yv0hh0-m0na00_1642090921_gg.jpg",
             "preco": "4000",
             "ativo": true,
             "id": "137a3933-714c-4ccb-a9cf-d04e5f42bc7d"
+        },
+        {
+            "id": "913d6c29-a774-40e9-b40c-7e54eb3f5aba",
+            "nome": "Teclado Mecanico Hyperx",
+            "descricao": "Lorem ipsum",
+            "imagem": "1657840204035-716553406-aaaaa.jpg",
+            "preco": "890.00",
+            "ativo": true
+        },
+        {
+            "nome": "Placa de video RTX 3050",
+            "descricao": "lorem ipsum",
+            "imagem": "1657839668533-27039830-placa-de-video-asus-nvidia-geforce-rtx-3050-oc-8gb-gddr6-ray-tracing-90yv0hh0-m0na00_1642090921_gg.jpg",
+            "preco": "2500.00",
+            "ativo": true,
+            "id": "a3f611e2-d9e9-47fe-bfb4-4a5f7a3c2034"
+        },
+        {
+            "nome": "Monitor gamer 244hz",
+            "descricao": "Lorem ipsum",
+            "imagem": "1657840290121-677624-aaa.webp",
+            "preco": "2220.00",
+            "ativo": true,
+            "id": "d37aecbd-692a-4805-8fcf-505e2fc5e956"
         }
     ],
     "usuarios": [
@@ -30,6 +55,11 @@
             "nome": "admin",
             "email": "admin@mail.com",
             "senha": "$2a$10$Rt2S0XGzhimd/2eO9k3S4u16N6mgyEuCGzelUOzxlREt/abAJ2Qke",
+            "cpf": "111.111.111-11",
+            "cep": "02355-111",
+            "sexo": "M",
+            "datanasc": "23091998",
+            "telefone": "11933832516",
             "logado:": false,
             "tipoUsuario": "admin"
         },
@@ -38,7 +68,21 @@
             "nome": "Bernardo",
             "email": "bedoval1@hotmail.com",
             "senha": "$2a$10$Rt2S0XGzhimd/2eO9k3S4u16N6mgyEuCGzelUOzxlREt/abAJ2Qke",
+            "cpf": "111.111.111-11",
+            "cep": "02355-111",
+            "sexo": "M",
             "logado": false
+        },
+        {
+            "nome": "Gabriel Feitosa",
+            "email": "gabrielz2x@hotmail.com",
+            "senha": "$2a$10$s4YT.Y5ARDDgNlQ/oCz.ee6KDm7pH4XlfhSbauaJi1WbbKQeKOXGa",
+            "cpf": "49589034888",
+            "cep": "02355100",
+            "sexo": "M",
+            "datanasc": "1998-09-23",
+            "telefone": "11933832516",
+            "id": "7c9f98a1-c95f-4943-b0f3-da5b632ff7e7"
         }
     ]
 }
