@@ -1,9 +1,57 @@
 <!DOCTYPE html>
 <%- include('../partials/head') %>
+<link rel="stylesheet" href="/css/segmentos.css">
 
 <body>
 
     <%- include('../partials/header') %>
+
+    <main>
+        <div class="infos-categoria">
+            <p>Você está em: Lançamentos</p>
+            <img src="/img/exemplo.png">
+        </div>
+
+        <div class="container-categorias">
+            <div class="filtros">
+                <p>Categorias Relacionadas</p>
+                <h3>Lançamentos</h3>
+                <ul>
+                    <li>Destaques</li>
+                    <li>Games</li>
+                    <li>Cadeiras</li>
+                </ul>
+
+                <h3>Filtrar por:</h3>
+                <p>Preço:</p>
+                <ul>
+                    <li>De: R$59 Até: R$199</li>
+                    <li>De: R$200 Até: R$499</li>
+                    <li>De: R$500 Até: R$1.999</li>
+                </ul>
+            </div>
+        
+            <div class="container-produtos">
+                <div class="ordenacao">
+                    <p>Ordenar</p>
+                    <form></form>
+                    <p>Exibir</p>
+                    <form></form>
+                </div>
+
+                <div class="bloco-produtos">
+                    <img src="/img/imagem-produto.png">
+                    <div class="produto-categoria">
+                        <p>Categoria do produto</p>
+                        <h2>Produto XYZ</h2>
+                    </div>
+                    <p class="preco">R$199,90</p>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
 
     <%- include('../partials/footer') %>
 

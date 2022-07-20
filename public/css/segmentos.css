@@ -1,0 +1,125 @@
+/* GERAL */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --c-azul-1: rgb(2, 73, 77);
+    --c-azul-2: rgb(3, 131, 138);
+    --c-verde-1: rgb(147, 254, 2);
+    --c-verde-2: #d6ff9c;
+    --c-preto-1: rgb(0, 0, 0);
+    --c-backg-1: #f3f9f2;
+    --c-verde-3: #42ff917a;
+    --background-perfil: #C2E1BD;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto'
+}
+
+main{
+    padding-top: 65px;
+    padding-inline: 86px;
+}
+
+/* INFORMAÇÕES DA CATEGORIA */
+
+.infos-categoria{
+    padding-bottom: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.infos-categoria p{
+    padding-bottom: 30px;
+}
+
+/* CONTAINER DE CATEGORIAS */
+
+.container-categorias{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 65px;
+}
+
+.filtros p:nth-child(1){
+    font-size: 24px;
+    font-weight: bold;
+
+    padding-bottom: 30px;
+}
+
+.filtros ul li{
+    list-style-type: none;
+    line-height: 25px;
+}
+
+.filtros h3{
+    margin-block: 30px;
+}
+
+/* CONTAINER PRODUTOS */
+
+.cont{
+    display: flex;
+    flex-direction: row;
+}
+.container-produtos{
+    display: flex;
+    flex-direction: column;
+}
+
+.ordenacao{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    margin-bottom: 50px;
+
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.bloco-produtos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    background-color: #fff;
+
+    width:948px;
+    height: auto;
+
+    padding-block: 22px;
+}
+
+.produto-categoria{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.produto-categoria p{
+    margin-bottom: 20px;
+}
+
+.preco{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--c-azul-1);
+    font-size: 24px;
+    font-weight: bold;
+}

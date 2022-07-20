@@ -1,0 +1,204 @@
+/* GERAL */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --c-azul-1: rgb(2, 73, 77);
+    --c-azul-2: rgb(3, 131, 138);
+    --c-verde-1: rgb(147, 254, 2);
+    --c-verde-2: #d6ff9c;
+    --c-preto-1: rgb(0, 0, 0);
+    --c-backg-1: #f3f9f2;
+    --c-verde-3: #42ff917a;
+    --background-perfil: #C2E1BD;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto'
+}
+
+main{
+    background-color: var(--background-perfil);
+
+    position: relative;
+}
+
+/* CONTEÚDO TOPO */
+
+.container-perfil-topo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    padding-block: 42px;
+}
+
+.block-perfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 250px;
+    background-color: var(--c-backg-1);
+    padding-inline: 20px;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    gap: 15px;
+
+    line-height: 40px;
+}
+
+.block-perfil p{
+    text-align: center;
+}
+
+span{
+    color: var(--c-verde-1)
+}
+
+/* HISTORICO DE PEDIDOS */
+
+.historico-pedidos{
+    display: flex;
+    align-items: center;
+
+    padding-inline: 60px;
+    padding-bottom: 15px;
+}
+
+.historico-pedidos h2{
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+
+    color:var(--c-azul-1)
+}
+
+.historico-pedidos img{
+    height: 50px;
+    width: 53px;
+}
+
+/* TABELA DE PEDIDOS */
+
+.meus-pedidos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding-bottom: 30px;
+}
+
+.accordion {
+    background-color: var(--c-backg-1);
+    color: var(--c-azul-1);
+
+    cursor: pointer;
+    padding-inline: 450px;
+    padding-block: 20px;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.painel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+
+    width: 990px;
+}
+
+.pedidos{
+    display: flex;
+    justify-content: space-between;
+
+    padding-inline: 40px;
+    padding-block: 30px;
+}
+
+/* ATALHOS */
+
+main h3{
+    font-size:24px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    color:var(--c-azul-1);
+
+    padding-block: 40px;
+}
+
+.atalho{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    padding-inline: 60px;
+}
+
+.atalhos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 350px;
+    height: 200px;
+    text-align: center;
+    color: var(--c-verde-1);
+    font-size: 22px;
+    font-weight: bold;
+
+    background-color: var(--c-backg-1);
+}
+
+.botao-home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-home{
+    margin-block: 40px;
+    width: 330px;
+    height: 60px;
+
+    background-color: var(--c-verde-1);
+    border: none;
+    border-radius: 30px;
+
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn-home:hover{
+    background-color: var(--c-verde-2);
+}
+
+
+/* CLICAVEIS */
+
+.links-clicaveis{
+    position: absolute;
+
+    height: calc(100vh - 421px);
+    width: 80px;
+
+    background-color: aqua;
+}

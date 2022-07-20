@@ -1,15 +1,83 @@
 <!DOCTYPE html>
 <%- include('../partials/head') %>
+<link rel="stylesheet" href="/css/perfil.css">
 
 <body>
 
     <%- include('../partials/header') %>
 
     <main>
-        <h1>MEU PERFIL</h1>
+        <!-- <div class="links-clicaveis">
+
+        </div> -->
+
+
+        <div class="container-perfil-topo">
+            <div class="block-perfil">
+                <img src="/img/Vector.png">
+                <p>Bem-vindo(a), nomedeexemplo
+                <br><span>exemplo@email.com.br</span></p>
+            </div>
+            <div class="block-perfil">
+                <p>Crédito disponível<br>
+                <span>R$1.500,00</span></p>
+            </div>
+        </div>
+
+        <div class="historico-pedidos">
+            <img src="/img/cart.png"><h2>Histórico de pedidos</h2>
+        </div>
+
+        <div class="meus-pedidos">
+            <button class="accordion">Veja seus pedidos</button>
+            <div class="painel">
+                <div class="pedidos">
+                    <p>Pedido nº000002</p>
+                    <p>Finalizado</p>
+                </div>
+            </div>
+        </div>
+
+        <h3>Atalhos</h3>
+        <div class="atalho">
+            <div class="atalhos">
+                <img src="/img/cart.png">
+                <p>Meu carrinho</p>
+            </div>
+            <div class="atalhos">
+                <img src="/img/fone.png">
+                <p>Atendimento ao cliente</p>
+            </div>
+            <div class="atalhos">
+                <img src="/img/coracao.png">
+                <p>Favoritos</p>
+            </div>
+        </div>
+        
+        <div class="botao-home">
+        <button class="btn-home">Voltar para home</button>
+        </div>
     </main>
 
     <%- include('../partials/footer') %>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+            panel.style.display = "none";
+            } else {
+            panel.style.display = "block";
+            }
+        });
+        }
+</script>
 
 </body>
 
