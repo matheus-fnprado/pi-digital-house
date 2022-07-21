@@ -1,14 +1,6 @@
 {
     "produtos": [
         {
-            "id": "2",
-            "nome": "Mouse Hyperx Pulsefire FPS Gaming",
-            "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat.",
-            "imagem": "1657840148212-668252355-133818631_1SZ.webp",
-            "preco": "159.99",
-            "ativo": true
-        },
-        {
             "id": "3",
             "nome": "HyperX Gaming Mouse Pad Fury, Tamanho Médio",
             "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat.",
@@ -33,12 +25,11 @@
             "ativo": true
         },
         {
+            "id": "a3f611e2-d9e9-47fe-bfb4-4a5f7a3c2034",
             "nome": "Placa de video RTX 3050",
             "descricao": "lorem ipsum",
-            "imagem": "1657839668533-27039830-placa-de-video-asus-nvidia-geforce-rtx-3050-oc-8gb-gddr6-ray-tracing-90yv0hh0-m0na00_1642090921_gg.jpg",
             "preco": "2500.00",
-            "ativo": true,
-            "id": "a3f611e2-d9e9-47fe-bfb4-4a5f7a3c2034"
+            "ativo": true
         },
         {
             "nome": "Monitor gamer 244hz",
@@ -83,6 +74,16 @@
             "datanasc": "1998-09-23",
             "telefone": "11933832516",
             "id": "7c9f98a1-c95f-4943-b0f3-da5b632ff7e7"
+        },
+        {
+            "nome": "",
+            "email": "",
+            "senha": "$2a$10$Fdri/fBapews3cZz0hUBueA.Byg1DP.FZybdbBM3GEH.2UvY0bvvi",
+            "cpf": "",
+            "cep": "",
+            "datanasc": "",
+            "telefone": "",
+            "id": "b5a5709e-53ee-48d7-97b2-0d2bbf346015"
         }
     ]
 }

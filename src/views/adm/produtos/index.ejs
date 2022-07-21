@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <%- include('../../partials/head') %>
+<link rel="stylesheet" href="/css/admindex.css">
 
 <body>
 
@@ -7,18 +8,19 @@
 
     <main>
         <section class="servicos-lista">
+            
             <div class="container">
                 <h1>Produtos</h1>
-                <a href="/adm/produtos/cadastroproduto" class="btn btn-primary mb-5">Cadastrar</a>
-                <table class="table table-dark table-striped table-bordered ">
+                <a href="/adm/produtos/cadastroproduto" class="button cadastrar">Cadastrar</a>
+                <table class="table">
                     <thead>
                         <tr>
                             <th scope="col">ID</th>
-                            <th scope="col">Nome</th>
-                            <th scope="col">imagem</th>
+                            <th scope="col">Imagem</th>
                             <th scope="col">Descrição</th>
-                            <th scope="col">Preço</th>
-                            <th scope="col">Ativo</th>
+                            <th scope="col">Preço Venda</th>
+                            <th scope="col">Ativo?</th>
+                            <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -32,18 +34,18 @@
                                 <%= produto.nome %>
                             </td>
                             <td>
-                                <%= produto.preco %>
+                                R$ <%= produto.preco %>
                             </td>
-                            <td>
-                                <%= produto.ativo ? "Habilitado" : "Desabilitado" %>
+                            <td class="ativo active">
+                                <%= produto.ativo ? "Sim" : "Não" %>
                             </td>
-                            <td>
+                            <td class="buttons">
                                 <a href="/adm/produtos/<%= produto.id %>" type="button"
-                                    class="btn btn-primary">Abrir</a>
+                                    class="button">Abrir</a>
                                 <a href="/adm/produtos/<%= produto.id %>/editar" type="button"
-                                    class="btn btn-secondary">Editar</a>
+                                    class="button">Editar</a>
                                 <form action="/adm/produtos/<%= produto.id %>?_method=DELETE" method="POST">
-                                    <button type="submit" class="btn btn-danger">Excluir</button>
+                                    <button type="submit" class="button danger">Excluir</button>
                                 </form>
                             </td>
                         </tr>
@@ -51,15 +53,12 @@
 
                     </tbody>
                 </table>
-
-
-
             </div>
         </section>
     </main>
 
     <%- include('../../partials/footer') %>
-
+    <!-- <script type="text/javascript" src="/js/produtos.js" defer></script> -->
 </body>
 
 </html>

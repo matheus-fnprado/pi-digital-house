@@ -6,8 +6,8 @@ const isLogin = require("../middlewares/isLogin");
 const isAdmin = require("../middlewares/isAdmin");
 const upload = require("../middlewares/upload");
 
-router.use(isLogin);
-router.use(isAdmin);
+// router.use(isLogin);
+// router.use(isAdmin);
 //Mostra a página inicial dos produtos
 router.get("/adm/produtos", produtoController.index);
 
