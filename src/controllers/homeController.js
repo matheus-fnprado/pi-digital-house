@@ -1,10 +1,18 @@
+const path = require('path');
+const fs = require('fs');
+const database = path.resolve("src", "database", "db.json");
+const Produto = require("../models/produtos");
+
 const homeController = {
   favoritos: (req, res) => {
     res.render("home/favoritos", { title: "Favoritos" });
   },
   index: (req, res) => {
-    res.render("home/index", { title: "Pagina Home" });
+    let conteudo = fs.readFileSync(database, "utf8");
+    const db = JSON.parse(conteudo);
+    res.render("home/index", { produtos: db.produtos, title: "Página inicial"});
   },
+
   meusdados: (req, res) => {
     res.render("home/meusdados", { title: "Meus Dados" });
   },
@@ -18,14 +26,24 @@ const homeController = {
     res.render("home/politica", { title: "Políticas de privacidade" });
   },
   produtos: (req, res) => {
-    res.render("home/produtos", { title: "Produtos" });
+    // let conteudo = fs.readFileSync(database, "utf8");
+    // const db = JSON.parse(conteudo);
+
+    const { id } = req.params;
+    const produto = Produto.findById(id);
+    if (!produto) {
+      return res.send("Produto não encontrado");
+    }
+    return res.render("home/produtos", { title: produto.nome, produto });
   },
   quemsomos: (req, res) => {
     res.render("home/quemsomos", { title: "Quem somos" });
   },
   segmentos: (req, res) => {
-    res.render("home/segmentos", { title: "Segmentos" });
-  },
+    let conteudo = fs.readFileSync(database, "utf8");
+    const db = JSON.parse(conteudo);
+    res.render("home/segmentos", { produtos: db.produtos, title: "Segmentos" });
+  }, 
   suporte: (req, res) => {
     res.render("home/suporte", { title: "Suporte" });
   },

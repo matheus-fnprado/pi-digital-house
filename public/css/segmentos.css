@@ -99,6 +99,8 @@ main{
     height: auto;
 
     padding-block: 22px;
+
+    margin-bottom: 20px;
 }
 
 .produto-categoria{
@@ -122,4 +124,9 @@ main{
     color: var(--c-azul-1);
     font-size: 24px;
     font-weight: bold;
+}
+
+.thumbnail{
+    height: 80px;
+    width: 150px;
 }

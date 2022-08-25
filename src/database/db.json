@@ -2,25 +2,25 @@
     "produtos": [
         {
             "id": "3",
-            "nome": "HyperX Gaming Mouse Pad Fury, Tamanho Médio",
+            "nome": "HyperX Gaming Mouse",
             "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat.",
-            "imagem": "1657840179803-919648141-81++s7AGryL._AC_SL1500_.jpg",
+            "imagem": "https://m.media-amazon.com/images/I/51h70wqozeL._AC_SL1000_.jpg",
             "preco": "59.99",
             "ativo": true
         },
         {
             "nome": "RTX 3060",
             "descricao": "Placa de Video RTX 3060",
-            "imagem": "1657839668533-27039830-placa-de-video-asus-nvidia-geforce-rtx-3050-oc-8gb-gddr6-ray-tracing-90yv0hh0-m0na00_1642090921_gg.jpg",
-            "preco": "4000",
+            "imagem": "https://images.kabum.com.br/produtos/fotos/164854/placa-de-video-asus-nvidia-dual-rtx-3060-o12g-v2-15-gbps-12gb-gddr6-ray-tracing-dlss-90yv0gb2-m0na10_1623244899_gg.jpg",
+            "preco": "4,000.00",
             "ativo": true,
             "id": "137a3933-714c-4ccb-a9cf-d04e5f42bc7d"
         },
         {
             "id": "913d6c29-a774-40e9-b40c-7e54eb3f5aba",
-            "nome": "Teclado Mecanico Hyperx",
+            "nome": "Teclado Mec Hyperx",
             "descricao": "Lorem ipsum",
-            "imagem": "1657840204035-716553406-aaaaa.jpg",
+            "imagem": "https://images.kabum.com.br/produtos/fotos/102433/teclado-mecanico-gamer-hyperx-alloy-origins-hx-kb6rdx-br_teclado-mecanico-gamer-hyperx-alloy-origins-hx-kb6rdx-br_1569421286_gg.jpg",
             "preco": "890.00",
             "ativo": true
         },
@@ -28,14 +28,15 @@
             "id": "a3f611e2-d9e9-47fe-bfb4-4a5f7a3c2034",
             "nome": "Placa de video RTX 3050",
             "descricao": "lorem ipsum",
-            "preco": "2500.00",
+            "imagem": "https://images.kabum.com.br/produtos/fotos/164854/placa-de-video-asus-nvidia-dual-rtx-3060-o12g-v2-15-gbps-12gb-gddr6-ray-tracing-dlss-90yv0gb2-m0na10_1623244899_gg.jpg",
+            "preco": "2,500.00",
             "ativo": true
         },
         {
             "nome": "Monitor gamer 244hz",
             "descricao": "Lorem ipsum",
-            "imagem": "1657840290121-677624-aaa.webp",
-            "preco": "2220.00",
+            "imagem": "https://m.media-amazon.com/images/I/8169dvTyzsL._AC_SX425_.jpg",
+            "preco": "2,220.00",
             "ativo": true,
             "id": "d37aecbd-692a-4805-8fcf-505e2fc5e956"
         }

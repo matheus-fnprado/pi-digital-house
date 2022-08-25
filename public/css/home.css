@@ -231,6 +231,8 @@ header{
     font-style: italic;
     color: white;
     text-justify: center;
+
+    margin-bottom: 1rem;
 }
 
 #cards{
@@ -238,15 +240,14 @@ header{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
-    gap: 20px;
+    /* margin-top: 30px; */
+    gap: 2rem;
 }
 
 #carrossel-1 .card-produto{
     width: 281px;
     max-width: 281px;
-    height: 372px !important;
-    max-height: 372 !important;
+    height: auto;
     justify-items: center;
     background-color: #fff;
 }
