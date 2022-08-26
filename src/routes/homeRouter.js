@@ -9,7 +9,7 @@ router.get("/meusdados", homeController.meusdados);
 router.get("/pagamento", homeController.pagamento);
 router.get("/perfil", homeController.perfil);
 router.get("/politicas", homeController.politicas);
-router.get("/produtos", homeController.produtos);
+router.get("/produtos/:id", homeController.produtos);
 router.get("/quemsomos", homeController.quemsomos);
 router.get("/segmentos", homeController.segmentos);
 router.get("/suporte", homeController.suporte);

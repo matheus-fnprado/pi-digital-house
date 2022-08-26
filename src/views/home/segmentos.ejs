@@ -39,14 +39,16 @@
                     <form></form>
                 </div>
 
+                <% produtos.forEach(produto => { %>
                 <div class="bloco-produtos">
-                    <img src="/img/imagem-produto.png">
+                    <img class="thumbnail" src="<%= produto.imagem %>">
                     <div class="produto-categoria">
                         <p>Categoria do produto</p>
-                        <h2>Produto XYZ</h2>
+                        <h2><%= produto.nome %></h2>
                     </div>
-                    <p class="preco">R$199,90</p>
+                    <p class="preco"><%= produto.preco %></p>
                 </div>
+                <% }) %>
             </div>
         </div>
 

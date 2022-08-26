@@ -547,7 +547,7 @@ a{
 
 /* RESPONSIVIDADE */
 
-@media (max-width: 1200px) {
+@media (max-width: 1600px) {
     .produto-info {
         grid-template-columns: 1fr;
         grid-template-rows: auto;

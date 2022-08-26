@@ -25,46 +25,18 @@
                 </div>
 
                 <div id="cards">
-                    <div class="card-produto">
-                        <img src="/img/Star.svg">
-                        <img src="/img/mouseft1.jpg" alt="">
-                        <h3>Mouse Gamer Redragon Cobra M711 V2</h3>
-                        <p class="precoDe">R$ 176,35</p>
-                        <p class="precoPor">R$ 99,90</p>
-                        <div id="button">
-                        <a href="/produtos"><button>COMPRAR AGORA</button></a>
+                    <% produtos.forEach(produto => { %>
+                        <div class="card-produto">
+                            <img src="/img/Star.svg">
+                            <img src="<%= produto.imagem %>" alt="">
+                            <h3><%= produto.nome %></h3>
+                            <p class="precoDe"><%= produto.preco %></p>
+                            <p class="precoPor"><%= produto.preco %></p>
+                            <div id="button">
+                                <a href="/produtos"><button>COMPRAR AGORA</button></a>
+                            </div>                       
                         </div>
-                    </div>
-                    <div class="card-produto">
-                        <img src="/img/Star.svg">
-                        <img src="/img/fonerazerft1.jpg" alt="">
-                        <h3>Headset Gamer Razer BlackShark V2 X</h3>
-                        <p class="precoDe">R$ 450,71</p>
-                        <p class="precoPor">R$ 289,90</p>
-                        <div id="button">
-                            <button>COMPRAR AGORA</button>
-                        </div>
-                    </div>
-                    <div class="card-produto">
-                        <img src="/img/Star.svg">
-                        <img src="/img/ssdft1.jpg" alt="">
-                        <h3>SSD Kingston A400, 480GB, SATA</h3>
-                        <p class="precoDe">R$ 541,06</p>
-                        <p class="precoPor">R$ 299,90</p>
-                        <div id="button">
-                            <button>COMPRAR AGORA</button>
-                        </div>
-                    </div>
-                    <div class="card-produto">
-                        <img src="/img/Star.svg">
-                        <img src="/img/memoriaft1.jpg" alt="">
-                        <h3>Memória Gamer Husky Gaming 8GB, DDR4</h3>
-                        <p class="precoDe">R$ 300,12</p>
-                        <p class="precoPor">R$ 229,90</p>
-                        <div id="button">
-                            <button>COMPRAR AGORA</button>
-                        </div>
-                    </div>
+                    <% }) %>
                 </div>
 
             </section>
@@ -99,46 +71,18 @@
                 </div>
 
                 <div id="cards">
-                    <div class="card-produto">
-                        <img src="/img/Star.svg">
-                        <img src="/img/mouseft1.jpg" alt="">
-                        <h3>Mouse Gamer Redragon Cobra M711 V2</h3>
-                        <p class="precoDe">R$ 176,35</p>
-                        <p class="precoPor">R$ 99,90</p>
-                        <div id="button">
-                            <a href="/produtos"><button>COMPRAR AGORA</button></a> 
+                    <% produtos.forEach(produto => { %>
+                        <div class="card-produto">
+                            <img src="/img/Star.svg">
+                            <img src="<%= produto.imagem %>" alt="">
+                            <h3><%= produto.nome %></h3>
+                            <p class="precoDe"><%= produto.preco %></p>
+                            <p class="precoPor"><%= produto.preco %></p>
+                            <div id="button">
+                                <a href="/produtos"><button>COMPRAR AGORA</button></a>
+                            </div>                       
                         </div>
-                    </div>
-                    <div class="card-produto">
-                        <img src="/img/Star.svg">
-                        <img src="/img/fonerazerft1.jpg" alt="">
-                        <h3>Headset Gamer Razer BlackShark V2 X</h3>
-                        <p class="precoDe">R$ 450,71</p>
-                        <p class="precoPor">R$ 289,90</p>
-                        <div id="button">
-                            <button>COMPRAR AGORA</button>
-                        </div>
-                    </div>
-                    <div class="card-produto">
-                        <img src="/img/Star.svg">
-                        <img src="/img/ssdft1.jpg" alt="">
-                        <h3>SSD Kingston A400, 480GB, SATA</h3>
-                        <p class="precoDe">R$ 541,06</p>
-                        <p class="precoPor">R$ 299,90</p>
-                        <div id="button">
-                            <button>COMPRAR AGORA</button>
-                        </div>
-                    </div>
-                    <div class="card-produto">
-                        <img src="/img/Star.svg">
-                        <img src="/img/memoriaft1.jpg" alt="">
-                        <h3>Memória Gamer Husky Gaming 8GB, DDR4</h3>
-                        <p class="precoDe">R$ 300,12</p>
-                        <p class="precoPor">R$ 229,90</p>
-                        <div id="button">
-                            <button>COMPRAR AGORA</button>
-                        </div>
-                    </div>
+                    <% }) %>
                 </div>
             </section>
 
@@ -170,49 +114,21 @@
                 </div>
 
                 <div id="cards">
-                    <div class="card-produto">
-                        <img src="/img/Star.svg">
-                        <img src="/img/mouseft1.jpg" alt="">
-                        <h3>Mouse Gamer Redragon Cobra M711 V2</h3>
-                        <p class="precoDe">R$ 176,35</p>
-                        <p class="precoPor">R$ 99,90</p>
-                        <div id="button">
-                            <a href="/produtos"><button>COMPRAR AGORA</button></a> 
+                    <% produtos.forEach(produto => { %>
+                        <div class="card-produto">
+                            <img src="/img/Star.svg">
+                            <img src="<%= produto.imagem %>" alt="">
+                            <h3><%= produto.nome %></h3>
+                            <p class="precoDe"><%= produto.preco %></p>
+                            <p class="precoPor"><%= produto.preco %></p>
+                            <div id="button">
+                                <a href="/produtos"><button>COMPRAR AGORA</button></a>
+                            </div>                       
                         </div>
-                    </div>
-                    <div class="card-produto">
-                        <img src="/img/Star.svg">
-                        <img src="/img/fonerazerft1.jpg" alt="">
-                        <h3>Headset Gamer Razer BlackShark V2 X</h3>
-                        <p class="precoDe">R$ 450,71</p>
-                        <p class="precoPor">R$ 289,90</p>
-                        <div id="button">
-                            <button>COMPRAR AGORA</button>
-                        </div>
-                    </div>
-                    <div class="card-produto">
-                        <img src="/img/Star.svg">
-                        <img src="/img/ssdft1.jpg" alt="">
-                        <h3>SSD Kingston A400, 480GB, SATA</h3>
-                        <p class="precoDe">R$ 541,06</p>
-                        <p class="precoPor">R$ 299,90</p>
-                        <div id="button">
-                            <button>COMPRAR AGORA</button>
-                        </div>
-                    </div>
-                    <div class="card-produto">
-                        <img src="/img/Star.svg">
-                        <img src="/img/memoriaft1.jpg" alt="">
-                        <h3>Memória Gamer Husky Gaming 8GB, DDR4</h3>
-                        <p class="precoDe">R$ 300,12</p>
-                        <p class="precoPor">R$ 229,90</p>
-                        <div id="button">
-                            <button>COMPRAR AGORA</button>
-                        </div>
-                    </div>
+                    <% }) %>
                 </div>
-
             </section>
+
         </main>
 
         <%- include('../partials/footer') %>
