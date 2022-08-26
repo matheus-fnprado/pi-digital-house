@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     {
       timestamps: false,
-      tableName: "administradores",
+      tableName: "administradores"
     }
   );
   return Administrador;

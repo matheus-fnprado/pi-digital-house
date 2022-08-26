@@ -12,18 +12,18 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
-      total: {
+      total_valor: {
         type: DataTypes.DECIMAL(6, 2),
         allowNull: false,
       },
       data: {
-        type: DataTypes.TIMESTAMP,
+        type: DataTypes.DATE,
         allowNull: false,
       },
     },
     {
-      timestamps: true,
-      tableName: "pedidos",
+      timestamps: false,
+      tableName: "pedidos"
     }
   );
   return Pedido;

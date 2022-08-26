@@ -1,4 +1,4 @@
-const { Produto } = require("../models");
+const { Produto, Categoria } = require("../models");
 
 const produtoController = {
   // Mostrar a página inicial dos produtos
@@ -9,9 +9,10 @@ const produtoController = {
   },
 
   //Mostrar a página para cadastar um produto
-  create: (req, res) => {
+  create: async (req, res) => {
+    const categorias = await Categoria.findAll();
     return res.render("adm/produtos/cadastroProduto", {
-      title: "Cadastrando Produto",
+      title: "Cadastrando Produto", categorias
     });
   },
 
