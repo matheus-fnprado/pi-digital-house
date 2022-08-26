@@ -28,8 +28,10 @@ module.exports = (sequelize, DataTypes) => {
         categoria_id: {
             type: DataTypes.INTEGER(10),
             allowNull: false
-       }
+        }
     }, {
-       timestamps: false,
-       tablename: 'produtos'
-    })};
+        timestamps: false,
+        tableName: 'produtos'
+    });
+    return Produto;
+};

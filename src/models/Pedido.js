@@ -19,6 +19,8 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         }
     }, {
-       timestamps: true,
-       tablename: 'pedidos'
-    })};
+        timestamps: true,
+        tableName: 'pedidos'
+    });
+    return Pedido;
+};

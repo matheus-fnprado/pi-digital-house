@@ -1,4 +1,4 @@
-const Produto = require("../models/produtos");
+const { Produto } = require("../models")
 
 const produtoController = {
   // Mostrar a página inicial dos produtos

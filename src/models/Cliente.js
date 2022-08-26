@@ -63,6 +63,8 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: true
         }
     }, {
-       timestamps: false,
-       tablename: 'clientes'
-    })};
+        timestamps: false,
+        tableName: 'clientes'
+    });
+    return Cliente;
+};

@@ -1,12 +1,12 @@
 const bcrypt = require("bcryptjs");
-const Usuario = require("../models/Usuario");
+const { Cliente } = require("../models")
 
 const AuthController = {
 
   store: (req, res) => {
     const { nomecompleto, emailLogin, cadastropf, senha, cependereco, sexo, datanascimento, telefonecontato } = req.body;
     const hash = bcrypt.hashSync(senha, 10);
-    const verificaSeCadastrado = Usuario.findOne(emailLogin);
+    const verificaSeCadastrado = Cliente.findOne(emailLogin);
 
     if (verificaSeCadastrado) {
       return res.render("home/meusdados", {
@@ -14,7 +14,7 @@ const AuthController = {
       });
     }
 
-    const usuario = {
+    const Cliente = {
       nome: nomecompleto,
       email: emailLogin,
       senha: hash,
@@ -25,21 +25,21 @@ const AuthController = {
       telefone: telefonecontato
     };
 
-    Usuario.create(usuario);
-    console.log(usuario)
+    Cliente.create(cliente);
+    console.log(cliente)
     return res.redirect("/meusdados");
   },
 
   login: (req, res) => {
     const { emailLogin, senhalogin } = req.body;
-    const usuario = Usuario.findOne(emailLogin);
-    if (!usuario || !bcrypt.compareSync(senhalogin, usuario.senha)) {
+    const cliente = Cliente.findOne(emailLogin);
+    if (!usuario || !bcrypt.compareSync(senhalogin, cliente.senha)) {
       return res.render("home/meusdados", {
         error: "Email ou senha estão incorretos ou não existe.", title: "Meus Dados"
       });
     }
 
-    req.session.usuario = usuario;
+    req.session.cliente = Cliente;
     return res.redirect("/perfil");
   },
 
