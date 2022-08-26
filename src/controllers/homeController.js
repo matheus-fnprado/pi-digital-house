@@ -1,5 +1,5 @@
-const path = require('path');
-const fs = require('fs');
+const path = require("path");
+const fs = require("fs");
 const database = path.resolve("src", "database", "db.json");
 const Produto = require("../models/produtos");
 
@@ -10,7 +10,10 @@ const homeController = {
   index: (req, res) => {
     let conteudo = fs.readFileSync(database, "utf8");
     const db = JSON.parse(conteudo);
-    res.render("home/index", { produtos: db.produtos, title: "Página inicial"});
+    res.render("home/index", {
+      produtos: db.produtos,
+      title: "Página inicial",
+    });
   },
 
   meusdados: (req, res) => {
@@ -43,7 +46,7 @@ const homeController = {
     let conteudo = fs.readFileSync(database, "utf8");
     const db = JSON.parse(conteudo);
     res.render("home/segmentos", { produtos: db.produtos, title: "Segmentos" });
-  }, 
+  },
   suporte: (req, res) => {
     res.render("home/suporte", { title: "Suporte" });
   },
@@ -52,7 +55,7 @@ const homeController = {
   },
   categorias: (req, res) => {
     res.render("home/categorias", { title: "Navegue por categoria" });
-  }
+  },
 };
 
 module.exports = homeController;

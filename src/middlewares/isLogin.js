@@ -3,7 +3,7 @@ const isLogin = (req, res, next) => {
     return res.redirect("/meusdados");
   }
   res.locals.usuario = req.session.usuario;
-  console.log(req.session.usuario)
+  console.log(req.session.usuario);
   return next();
 };
 

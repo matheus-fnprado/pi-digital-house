@@ -5,7 +5,11 @@ const CarrinhoController = {
     let total = 0;
 
     if (!carrinho) {
-      return res.render("home/meucarrinho", { carrinho: [], total, title: "Meu Carrinho" });
+      return res.render("home/meucarrinho", {
+        carrinho: [],
+        total,
+        title: "Meu Carrinho",
+      });
     }
 
     carrinho.forEach((produto) => {
