@@ -17,16 +17,16 @@ const produtoController = {
   },
 
   //Realiza o cadastro de um novo produto no banco de dados
-  store: (req, res) => {
+  store: async (req, res) => {
     const { nome, descricao, preco, ativo } = req.body;
-    const produtos = {
+    const produto = {
       nome,
       descricao,
       imagem: req.file.filename,
       preco,
       ativo: ativo == "on" ? true : false,
     };
-    Produto.save(produtos);
+   await Produto.create(produto);
     return res.redirect("/adm/produtos");
   },
 

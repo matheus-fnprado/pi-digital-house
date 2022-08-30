@@ -11,8 +11,8 @@ CREATE TABLE administradores (
     email VARCHAR (100) not null
 );
 
-CREATE TABLE categorias_produtos (
-    id INT (10) PRIMARY auto_increment KEY NOT NULL,
+CREATE TABLE categorias (
+    id INT (10) PRIMARY KEY auto_increment NOT NULL,
     nome VARCHAR (100) NOT NULL
 );
 
@@ -24,10 +24,11 @@ CREATE TABLE produtos (
     imagem VARCHAR (200) NOT NULL,
     ativo CHAR(1) NOT NULL,
     categoria_id INT (10) NOT NULL,
-    FOREIGN KEY (categoria_id) references categorias_produtos (id_categoria)
+    FOREIGN KEY (categoria_id) references categorias (id)
 );
 
 CREATE TABLE clientes (
+    id INT (10) PRIMARY KEY auto_increment NOT NULL,
     nome VARCHAR (200) NOT NULL,
     cpf VARCHAR (15) NOT NULL,
     data_nascto_cliente DATE NOT NULL,
@@ -44,12 +45,14 @@ CREATE TABLE clientes (
     complemento TEXT 
 );
 
+USE pi_digital_house;
+
 CREATE TABLE pedidos (
     id int PRIMARY KEY auto_increment not null,
     id_cliente int not null,
     total_valor DECIMAL (6, 2) NOT NULL,
     data TIMESTAMP,
-    FOREIGN KEY (id_cliente) references clientes (cliente_id)
+    FOREIGN KEY (id_cliente) references clientes(id)
 );
 
 CREATE TABLE pedidos_produtos (
