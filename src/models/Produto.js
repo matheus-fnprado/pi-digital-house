@@ -30,6 +30,7 @@ module.exports = (sequelize, DataTypes) => {
       categoria_id: {
         type: DataTypes.INTEGER(10),
         allowNull: false,
+        
       },
     },
     {

@@ -27,7 +27,12 @@
                                 <label for="" class="form-label">Imagem</label>
                                 <input type="file" name="imagem" class="form-control">
                             </div>
-
+                            <div class="mb-3">
+                                <label for="" class="form-label">Categoria</label>
+                                <% categorias.forEach(categoria => { %>
+                                    <input type="radio" id="<%= categoria.id%>" name="categoria_id" value="<%= categoria.nome%>"><label for="<%= categoria.id%>"><h1><%= categoria.nome%></h1></label>
+                                <% }) %>
+                            </div>
                             <div class="mb-3">
                                 <label for="" class="form-label">Preço</label>
                                 <input type="number" name="preco" class="form-control">
