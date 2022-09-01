@@ -78,7 +78,7 @@ const produtoController = {
   //   return res.redirect("/adm/produtos");
   // },
 
-  update: (req, res) => {
+  update: async (req, res) => {
     const { id } = req.params;
     const { nome, descricao, imagem, preco, ativo } = req.body;
     const produtos = {
@@ -89,8 +89,17 @@ const produtoController = {
       preco,
       ativo: ativo ? true : false,
     };
-    
-    Produto.update(id, produtos);
+
+    await Produto.update({
+        nome: nome, 
+        descricao: descricao,
+        preco: preco,
+        imagem: imagem
+      }, 
+      { 
+        where: { id: id } 
+      }
+      );
     return res.redirect("/adm/produtos");
   },
 

@@ -23,40 +23,49 @@ const homeController = {
   meusdados: (req, res) => {
     res.render("home/meusdados", { title: "Meus Dados" });
   },
+
   pagamento: (req, res) => {
     res.render("home/pagamento", { title: "Pagamento" });
   },
+
   perfil: (req, res) => {
     res.render("home/perfil", { title: "Meu Perfil" });
   },
+
   politicas: (req, res) => {
     res.render("home/politica", { title: "Políticas de privacidade" });
   },
-  produtos: (req, res) => {
+
+  produtos: async (req, res) => {
     // let conteudo = fs.readFileSync(database, "utf8");
     // const db = JSON.parse(conteudo);
 
     const { id } = req.params;
-    const produto = Produto.findById(id);
+    const produto = await Produto.findByPk(id);
     if (!produto) {
       return res.send("Produto não encontrado");
     }
     return res.render("home/produtos", { title: produto.nome, produto });
   },
+
   quemsomos: (req, res) => {
     res.render("home/quemsomos", { title: "Quem somos" });
   },
+
   segmentos: (req, res) => {
     // let conteudo = fs.readFileSync(database, "utf8");
     // const db = JSON.parse(conteudo);
     // res.render("home/segmentos", { produtos: db.produtos, title: "Segmentos" });
   },
+
   suporte: (req, res) => {
     res.render("home/suporte", { title: "Suporte" });
   },
+
   termos: (req, res) => {
     res.render("home/termos", { title: "Termos de uso" });
   },
+
   categorias: (req, res) => {
     res.render("home/categorias", { title: "Navegue por categoria" });
   },
