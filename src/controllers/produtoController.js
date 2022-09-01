@@ -2,8 +2,8 @@ const { Produto, Categoria } = require("../models");
 
 const produtoController = {
   // Mostrar a página inicial dos produtos
-  index: (req, res) => {
-    const produtos = Produto.findAll();
+  index: async (req, res) => {
+    const produtos = await Produto.findAll();
     console.log(produtos);
     return res.render("adm/produtos/index", { title: "Produtos", produtos });
   },
@@ -18,24 +18,28 @@ const produtoController = {
 
   //Realiza o cadastro de um novo produto no banco de dados
   store: async (req, res) => {
-    const { nome, descricao, preco, ativo } = req.body;
+    const { nome, descricao, preco, ativo, categoria_id } = req.body;
     const produtos = {
       nome,
       descricao,
       imagem: req.file.filename,
-      preco,
-      categoria_id,
-      ativo: ativo == "on" ? true : false,
+      preco: parseFloat(preco),
+      categoria_id: parseInt(categoria_id),
+      ativo: ativo == "on" ? 1 : 0,
     }
 
     await Produto.create(produtos);
-    return res.redirect("/adm/produtos");
+
+    console.log(req.body)
+
+    return res.redirect("/adm/produtos/index");
   },
 
   //Exibe a página de detalhes de um produto
-  show: (req, res) => {
+  show: async (req, res) => {
     const { id } = req.params;
-    const produtos = Produto.findById(id);
+
+    const produtos = await Produto.findByPk(id);
     if (!produtos) {
       return res.send("Produto não encontrado");
     }
@@ -46,9 +50,9 @@ const produtoController = {
   },
 
   //Exibe a página para editar os dados do produto
-  edit: (req, res) => {
+  edit: async (req, res) => {
     const { id } = req.params;
-    const produtos = Produto.findById(id);
+    const produtos = await Produto.findByPk(id);
     if (!produtos) {
       return res.send("Produto não encontrado");
     }
@@ -59,6 +63,21 @@ const produtoController = {
   },
 
   //Atualiza os dados do produto no banco de dados
+  // update: (req, res) => {
+  //   const { id } = req.params;
+  //   const { nome, descricao, imagem, preco, ativo } = req.body;
+  //   const produtos = {
+  //     id,
+  //     nome,
+  //     descricao,
+  //     imagem,
+  //     preco,
+  //     ativo: ativo ? true : false,
+  //   };
+  //   Produto.update(id, produtos);
+  //   return res.redirect("/adm/produtos");
+  // },
+
   update: (req, res) => {
     const { id } = req.params;
     const { nome, descricao, imagem, preco, ativo } = req.body;
@@ -70,6 +89,7 @@ const produtoController = {
       preco,
       ativo: ativo ? true : false,
     };
+    
     Produto.update(id, produtos);
     return res.redirect("/adm/produtos");
   },

@@ -1,3 +1,4 @@
+-- Active: 1655943606363@@127.0.0.1@3306@pi_digital_house
 DROP DATABASE IF EXISTS pi_digital_house;
 
 CREATE DATABASE pi_digital_house;
@@ -22,7 +23,7 @@ CREATE TABLE produtos (
     preco DECIMAL (6, 2) NOT NULL,
     descricao TEXT,
     imagem VARCHAR (200) NOT NULL,
-    ativo CHAR(1) NOT NULL,
+    ativo TINYINT NOT NULL,
     categoria_id INT (10) NOT NULL,
     FOREIGN KEY (categoria_id) references categorias (id)
 );
@@ -58,6 +59,6 @@ CREATE TABLE pedidos (
 CREATE TABLE pedidos_produtos (
     id_produto int NOT NULL,
     id_pedido int NOT NULL,
-    FOREIGN KEY (id_produto) references produtos (produto_id),
-    FOREIGN KEY (id_pedido) references pedidos (pedido_id)
+    FOREIGN KEY (id_produto) references produtos (id),
+    FOREIGN KEY (id_pedido) references pedidos (id)
 );

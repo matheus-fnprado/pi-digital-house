@@ -24,13 +24,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
       },
       ativo: {
-        type: DataTypes.CHAR(1),
+        type: DataTypes.BOOLEAN,
         allowNull: false,
       },
       categoria_id: {
         type: DataTypes.INTEGER(10),
         allowNull: false,
-        
       },
     },
     {
@@ -38,5 +37,8 @@ module.exports = (sequelize, DataTypes) => {
       tableName: "produtos"
     }
   );
+  Produto.associate = (models) =>{
+    Produto.belongsTo(models.Categoria, { foreignKey: 'categoria_id', as: 'categoria'} )
+  }
   return Produto;
 };

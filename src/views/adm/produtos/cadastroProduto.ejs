@@ -29,9 +29,12 @@
                             </div>
                             <div class="mb-3">
                                 <label for="" class="form-label">Categoria</label>
+
                                 <% categorias.forEach(categoria => { %>
-                                    <input type="radio" id="<%= categoria.id%>" name="categoria_id" value="<%= categoria.nome%>"><label for="<%= categoria.id%>"><h1><%= categoria.nome%></h1></label>
+                                    <input type="radio" id="categoria" name="categoria_id" value="<%= categoria.id %>"><label for="<%= categoria.id %>"><%= categoria.nome%></label>
                                 <% }) %>
+
+
                             </div>
                             <div class="mb-3">
                                 <label for="" class="form-label">Preço</label>
@@ -41,7 +44,6 @@
                                 <input name="ativo" type="checkbox" class="form-check-input" id="exampleCheck1">
                                 <label class="form-check-label" name="ativo" for="exampleCheck1">Ativo</label>
                             </div>
-
 
                             <button type="submit" class="btn btn-primary">Cadastrar</button>
                         </form>
