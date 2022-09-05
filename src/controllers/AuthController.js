@@ -6,7 +6,11 @@ const AuthController = {
     const { nome, cpf, email, data_nascto_cliente, celular, sexo, senha, cidade, estado, bairro, cep, rua, numero, complemento} = req.body;
 
     const hash = bcrypt.hashSync(senha, 10);
-    const verificaSeCadastrado = await Cliente.findOne({email: email});
+    const verificaSeCadastrado = await Cliente.findOne({
+      where: {
+        email: email
+      }
+      });
 
     if (verificaSeCadastrado) {
       return res.render("home/meusdados", {
@@ -39,7 +43,12 @@ const AuthController = {
 
   login: async (req, res) => {
     const { emaillogin, senhalogin } = req.body;
-    const cliente = await Cliente.findOne({email: emaillogin});
+    const cliente = await Cliente.findOne({
+      attributes: ['id', 'nome', 'email', 'senha'],
+      where: {
+        email: emaillogin
+      }
+      });
    
     if (!cliente || !bcrypt.compareSync(senhalogin, cliente.senha)) {
       return res.render("home/meusdados", {
@@ -48,7 +57,7 @@ const AuthController = {
       });
     }
 
-    req.session.cliente = (cliente)
+    req.session.cliente = cliente
     return res.redirect("/perfil");
   },
 

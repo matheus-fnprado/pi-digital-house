@@ -10,6 +10,11 @@ const homeController = {
 
   index: async (req, res) => {
     const produtos = await Produto.findAll()
+    
+    if(req.session.cliente){
+      return res.render("home/index", { produtos, title:"Pagina Inicial" , cliente: req.session.cliente});
+    }
+
     return res.render("home/index", { produtos, title:"Pagina Inicial" });
   },
 

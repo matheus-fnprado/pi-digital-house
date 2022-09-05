@@ -17,7 +17,12 @@
         <a href="/perfil">
         <img src="/img/iconeminhaconta.svg">
         </a>
-        <a href="/meusdados">Faça <span>login</span> ou crie<br>seu <span>cadastro</span></a>
+
+        <% if(locals.cliente && cliente){ %>
+            <a href="/perfil">Olá <%= cliente.nome %> seja bem vindo!
+        <%} else {%>
+            <a href="/meusdados">Faça <span>login</span> ou crie<br>seu <span>cadastro</span></a>
+        <%}%>
     </div>
 
     <div class="navigation">

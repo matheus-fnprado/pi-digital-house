@@ -1,5 +1,5 @@
 const CarrinhoController = {
-  showCart: (req, res) => {
+  showCart: async (req, res) => {
     const { carrinho } = req.session;
 
     let total = 0;
@@ -12,17 +12,17 @@ const CarrinhoController = {
       });
     }
 
-    carrinho.forEach((produto) => {
+     await carrinho.forEach((produto) => {
       total += Number(produto.preco);
     });
 
     return res.render("home/meucarrinho", { carrinho, total });
   },
 
-  addCart: (req, res) => {
+  addCart: async (req, res) => {
     const { productId, nome, preco, imagem } = req.body;
 
-    const produto = { id: productId, nome, preco, imagem };
+    const produto = await { id: productId, nome, preco, imagem };
 
     if (req.session.carrinho) {
       req.session.carrinho.push(produto);
@@ -32,11 +32,11 @@ const CarrinhoController = {
     return res.redirect("home/meucarrinho");
   },
 
-  removeCart: (req, res) => {
+  removeCart: async (req, res) => {
     const { id } = req.params;
     let { carrinho } = req.session;
 
-    const index = carrinho.findIndex((produto) => produto.id == id);
+    const index = await carrinho.findIndex((produto) => produto.id == id);
 
     const carrinhoAtualizado = carrinho.splice(index, 1);
     carrinho = carrinhoAtualizado;

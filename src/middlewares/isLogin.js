@@ -1,9 +1,9 @@
 const isLogin = (req, res, next) => {
-  if (!req.session.usuario) {
+  if (!req.session.cliente) {
     return res.redirect("/meusdados");
   }
-  res.locals.usuario = req.session.usuario;
-  console.log(req.session.usuario);
+  res.locals.cliente = req.session.cliente;
+  console.log(req.session.cliente);
   return next();
 };
 
