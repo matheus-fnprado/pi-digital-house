@@ -2,19 +2,11 @@ const bcrypt = require("bcryptjs");
 const { Cliente } = require("../models");
 
 const AuthController = {
-  store: (req, res) => {
-    const {
-      nomecompleto,
-      emailLogin,
-      cadastropf,
-      senha,
-      cependereco,
-      sexo,
-      datanascimento,
-      telefonecontato,
-    } = req.body;
+  store: async (req, res) => {
+    const { nome, cpf, email, data_nascto_cliente, celular, sexo, senha, cidade, estado, bairro, cep, rua, numero, complemento} = req.body;
+
     const hash = bcrypt.hashSync(senha, 10);
-    const verificaSeCadastrado = Cliente.findOne(emailLogin);
+    const verificaSeCadastrado = await Cliente.findOne({email: email});
 
     if (verificaSeCadastrado) {
       return res.render("home/meusdados", {
@@ -22,33 +14,41 @@ const AuthController = {
       });
     }
 
-    const Cliente = {
-      nome: nomecompleto,
-      email: emailLogin,
+    const cliente = {
+      nome,
+      email,
       senha: hash,
-      cpf: cadastropf,
-      cep: cependereco,
+      cpf,
+      cep,
       sexo: sexo,
-      datanasc: datanascimento,
-      telefone: telefonecontato,
+      data_nascto_cliente,
+      celular,
+      bairro,
+      cidade,
+      estado,
+      rua,
+      numero,
+      complemento
     };
 
-    Cliente.create(cliente);
-    console.log(cliente);
+    await Cliente.create(cliente);
+    
+    console.log(req.body)
     return res.redirect("/meusdados");
   },
 
-  login: (req, res) => {
-    const { emailLogin, senhalogin } = req.body;
-    const cliente = Cliente.findOne(emailLogin);
-    if (!usuario || !bcrypt.compareSync(senhalogin, cliente.senha)) {
+  login: async (req, res) => {
+    const { emaillogin, senhalogin } = req.body;
+    const cliente = await Cliente.findOne({email: emaillogin});
+   
+    if (!cliente || !bcrypt.compareSync(senhalogin, cliente.senha)) {
       return res.render("home/meusdados", {
         error: "Email ou senha estão incorretos ou não existe.",
         title: "Meus Dados",
       });
     }
 
-    req.session.cliente = Cliente;
+    req.session.cliente = (cliente)
     return res.redirect("/perfil");
   },
 

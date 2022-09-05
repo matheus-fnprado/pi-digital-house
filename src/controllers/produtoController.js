@@ -63,22 +63,7 @@ const produtoController = {
   },
 
   //Atualiza os dados do produto no banco de dados
-  // update: (req, res) => {
-  //   const { id } = req.params;
-  //   const { nome, descricao, imagem, preco, ativo } = req.body;
-  //   const produtos = {
-  //     id,
-  //     nome,
-  //     descricao,
-  //     imagem,
-  //     preco,
-  //     ativo: ativo ? true : false,
-  //   };
-  //   Produto.update(id, produtos);
-  //   return res.redirect("/adm/produtos");
-  // },
-
-  update: async (req, res) => {
+    update: async (req, res) => {
     const { id } = req.params;
     const { nome, descricao, imagem, preco, ativo } = req.body;
     const produtos = {

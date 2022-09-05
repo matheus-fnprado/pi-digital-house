@@ -7,14 +7,7 @@ const homeController = {
   favoritos: (req, res) => {
     res.render("home/favoritos", { title: "Favoritos" });
   },
-  // index: (req, res) => {
-  //   let conteudo = fs.readFileSync(database, "utf8");
-  //   const db = JSON.parse(conteudo);
-  //   res.render("home/index", {
-  //     produtos: db.produtos,
-  //     title: "Página inicial",
-  //   });
-  // },
+
   index: async (req, res) => {
     const produtos = await Produto.findAll()
     return res.render("home/index", { produtos, title:"Pagina Inicial" });
@@ -53,9 +46,7 @@ const homeController = {
   },
 
   segmentos: (req, res) => {
-    // let conteudo = fs.readFileSync(database, "utf8");
-    // const db = JSON.parse(conteudo);
-    // res.render("home/segmentos", { produtos: db.produtos, title: "Segmentos" });
+    
   },
 
   suporte: (req, res) => {
